@@ -1,1 +1,1 @@
-pandoc -s cv.tex -o README.md -t markdown_strict
+pandoc -s cv.tex -o README.md -t markdown_strict --normalize
