@@ -12,9 +12,8 @@ Kaggle: [scottclowe](https://www.kaggle.com/scottclowe)
 Current position
 ================
 
-**<span style="font-variant:small-caps;">Ph.D.</span> candidate**,
-Institute for Adaptive and Neural Computation, School of Informatics,
-University of Edinburgh.
+**Ph.D. candidate**, Institute for Adaptive and Neural Computation,
+School of Informatics, University of Edinburgh.
 
 Project: Analysis of experimental data from multi-electrode recordings
 in the visual cortex.
