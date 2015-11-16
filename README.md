@@ -16,13 +16,13 @@ Current position
 Institute for Adaptive and Neural Computation, School of Informatics,
 University of Edinburgh.
 
-<span>Project: Analysis of experimental data from multi-electrode
-recordings in the visual cortex. </span>
+Project: Analysis of experimental data from multi-electrode recordings
+in the visual cortex.
 
-<span>Supervised jointly by Dr Mark van Rossum, School of Informatics,
+Supervised jointly by Dr Mark van Rossum, School of Informatics,
 University of Edinburgh; Prof. Stefano Panzeri, Italian Institute of
 Technology Center for Neuroscience and Cognitive Systems, Trento; and
-Prof. Alex Thiele, School of Psychology, Newcastle University.</span>
+Prof. Alex Thiele, School of Psychology, Newcastle University.
 
 Education
 =========
@@ -162,38 +162,37 @@ Poster Presentations
 
 -   Scott C. Lowe, *et al.* (2015, April), “Cortical dynamics across V1
     laminae generate independent frequency channels encoding visual
-    information”. <span>Presented at the *BNA2015: Festival of
-    Neuroscience*, Edinburgh, UK. Poster Reference:
-    [P2-C-029](http://www.bna.org.uk/static/docs/BNA2015/BNA2015-Abstract-Book.pdf).</span>
+    information”. Presented at the *BNA2015: Festival of Neuroscience*,
+    Edinburgh, UK. Poster Reference:
+    [P2-C-029](http://www.bna.org.uk/static/docs/BNA2015/BNA2015-Abstract-Book.pdf).
 
 -   Scott C. Lowe, *et al.* (2014, November), “Different cortical layers
     in V1 encode different visual information in different frequency
-    bands”. <span>Presented at the *2014 Meeting of the Society for
+    bands”. Presented at the *2014 Meeting of the Society for
     Neuroscience*, Washington DC, USA. Program No.
-    [532.19](http://www.abstractsonline.com/Plan/ViewAbstract.aspx?sKey=a018159d-9116-492d-b234-b4c53acd5260&cKey=e909b23c-40c3-4371-8816-345dfe3e6c3c&mKey=54c85d94-6d69-4b09-afaa-502c0e680ca7).</span>
+    [532.19](http://www.abstractsonline.com/Plan/ViewAbstract.aspx?sKey=a018159d-9116-492d-b234-b4c53acd5260&cKey=e909b23c-40c3-4371-8816-345dfe3e6c3c&mKey=54c85d94-6d69-4b09-afaa-502c0e680ca7).
 
 -   Scott C. Lowe, *et al.* (2014, July), “Quantification of the Laminar
     and Frequency Structure of Information in Primary Visual Cortex”.
-    <span>Presented at the *9th FENS Forum of Neuroscience*, Milan,
-    Italy. Abstract number
-    [FENS-2860](http://fens2014.meetingxpert.net/FENS_427/poster_102139/program.aspx).</span>
+    Presented at the *9th FENS Forum of Neuroscience*, Milan, Italy.
+    Abstract number
+    [FENS-2860](http://fens2014.meetingxpert.net/FENS_427/poster_102139/program.aspx).
 
 -   Scott C. Lowe, *et al.* (2014, July), “Quantification of the Laminar
     and Frequency Structure of Information in Primary Visual Cortex”.
-    <span>Presented at the *AREADNE 2014 session*, Santorini,
-    Greece</span>.
+    Presented at the *AREADNE 2014 session*, Santorini, Greece.
 
 -   Scott C. Lowe, *et al.* (2013, November), “Decoding spiking activity
     in V4, but not V1, correlates with behaviour in perceptual
-    learning”. <span>Presented at the *2013 Meeting of the Society for
+    learning”. Presented at the *2013 Meeting of the Society for
     Neuroscience*, San Diego, USA. Program No.
-    [555.11.](http://www.abstractsonline.com/Plan/ViewAbstract.aspx?sKey=a69ca081-1031-4c5e-917c-b57b7b7255cf&cKey=5e73e1d9-7177-4207-9890-3efb2a57985b&mKey=8d2a5bec-4825-4cd6-9439-b42bb151d1cf)</span>
+    [555.11.](http://www.abstractsonline.com/Plan/ViewAbstract.aspx?sKey=a69ca081-1031-4c5e-917c-b57b7b7255cf&cKey=5e73e1d9-7177-4207-9890-3efb2a57985b&mKey=8d2a5bec-4825-4cd6-9439-b42bb151d1cf)
 
 -   Scott C. Lowe, *et al.* (2013, July), “Decoding spiking activity in
     V4, but not V1, correlates with behavioural performance in
-    perceptual learning task”. <span>Presented at the *Twenty Second
-    Annual Computational Neuroscience Meeting: CNS\*2013*, Paris,
-    France</span>. *BMC Neuroscience* 2013, **14**(Suppl 1):P385
+    perceptual learning task”. Presented at the *Twenty Second Annual
+    Computational Neuroscience Meeting: CNS\*2013*, Paris, France. *BMC
+    Neuroscience* 2013, **14**(Suppl 1):P385
     [doi:10.1186/1471-2202-14-S1-P385](http://dx.doi.org/10.1186/1471-2202-14-S1-P385).
 
 Theses & Dissertations
