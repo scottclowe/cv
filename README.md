@@ -72,17 +72,17 @@ Employment History
 
 -   [t]<span>0.2</span> <span>U. of Edinburgh,  
     Edinburgh  
-    U.K. </span>
+    U.K.</span>
 
     [t]<span>0.8</span> **Technical Research Assistant.**
     <span>Development of tools for analysis of calcium imaging data from
     mouse primary visual cortex with the Rochefort Lab, Centre for
-    Integrative Physiology. </span>
+    Integrative Physiology.</span>
 
 -   [t]<span>0.2</span> <span>FleXtel Ltd,  
     Sandbach,  
     Cheshire  
-    U.K. </span>
+    U.K.</span>
 
     [t]<span>0.8</span> **Web Technician.** <span>Programming in PHP for
     telecoms company. Designed and coded new website selling isolated
@@ -94,7 +94,7 @@ Employment History
 -   [t]<span>0.2</span> <span>Dept. of Physics,  
     Durham University,  
     Durham  
-    U.K. </span>
+    U.K.</span>
 
     [t]<span>0.8</span> **Physics Studentship.** <span>Programming in
     MATLAB to simulate Rydberg atoms and their interactions.</span>
