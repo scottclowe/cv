@@ -13,6 +13,7 @@
 # ============
 *.txt       text
 *.md        text
+*.pdf       diff=pdf
 
 # Graphics
 # ============
