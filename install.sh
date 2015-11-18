@@ -7,5 +7,10 @@ cp -p pre-commit.sh .git/hooks/pre-commit
 echo "#!/bin/bash" > /usr/local/bin/pdf2txt
 echo "pdftotext $1 -" >> /usr/local/bin/pdf2txt
 chmod +x /usr/local/bin/pdf2txt
-echo "[diff \"pdf\"]" >> ~/.gitconfig
-echo "    textconv = pdf2txt" >> ~/.gitconfig
+
+# Add the setting for diffing PDF files to user's .gitconfig
+if ! grep "diff \"pdf\"" ~/.gitconfig;
+then
+    echo "[diff \"pdf\"]" >> ~/.gitconfig
+    echo "    textconv = pdf2txt" >> ~/.gitconfig
+fi
