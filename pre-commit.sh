@@ -21,7 +21,7 @@ then
 fi
 
 # Check if SOURCE or TARGET file has unstaged changes
-NEED_STASH=git ls-files -m | grep -q -e $SOURCE -e $TARGET
+NEED_STASH=`git ls-files -m | grep -q -e $SOURCE -e $TARGET`
 # If so, we need to temporarily stash changes not on the working index
 if $NEED_STASH
 then
