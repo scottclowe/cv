@@ -11,16 +11,18 @@ then
     exit 0;
 fi
 
-# Check if TARGET file has unstaged changes
-if git ls-files -m | grep -q $TARGET;
+# Check if TARGET file has staged changes
+if git diff --name-only --cached | grep -q $TARGET;
 then
-    echo "Target file $TARGET has unstaged changes."
-    echo "You need to fix this before committing changes to $SOURCE."
+    # SOURCE is not staged, so there is nothing to do
+    echo "Target file $TARGET has staged changes, so we can't proceed."
+    echo "Either commit changes to $TARGET on its own, or unstage $TARGET."
     exit 1;
 fi
 
-# Check if SOURCE file has unstaged changes
-NEED_STASH=git ls-files -m | grep -q $SOURCE
+# Check if SOURCE or TARGET file has unstaged changes
+NEED_STASH=git ls-files -m | grep -q -e $SOURCE -e $TARGET
+# If so, we need to temporarily stash changes not on the working index
 if $NEED_STASH
 then
     echo "Had to stash before working on pre-commit hook"
