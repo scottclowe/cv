@@ -151,6 +151,10 @@ Journal articles
     Stefano Panzeri (in preparation), “Changes in V1 and V4 encoding of
     visual contrast during perceptual learning”.
 
+-   Scott C. Lowe, Finlay Maguire, Gavin Gray (in preparation),
+    “Predicting the onset of epileptic seizures from intracranial-EEG:
+    which features are most useful”.
+
 Talks
 -----
 
