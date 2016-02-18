@@ -131,7 +131,7 @@ Journal articles
     Schölkopf, Stefano Panzeri (2015, September), “Shifts of gamma phase
     across primary visual cortical sites reflect dynamic stimulus
     modulated information transfer”, *PLOS Biology*. [DOI:
-    10.1371/journal.pbio.1002257](https://doi.org/10.1371/journal.pbio.1002257).  
+    10.1371/journal.pbio.1002257](https://doi.org/10.1371/journal.pbio.1002257).
 
 -   Scott C. Lowe, Daniel Zaldivar, Yusuke Murayama, Mark C. W. van
     Rossum, Nikos K. Logothetis, Stefano Panzeri (to be submitted),
