@@ -3,6 +3,7 @@ University of Edinburgh
 Informatics Forum  
 10 Crichton Street  
 Edinburgh, EH8 9AB, U.K.  
+  
 Linkedin:
 [uk.linkedin.com/in/scottclowe](https://uk.linkedin.com/in/scottclowe)  
 GitHub: [scottclowe](https://github.com/scottclowe)  
@@ -21,7 +22,9 @@ in the visual cortex.
 Supervised jointly by Dr Mark van Rossum, School of Informatics,
 University of Edinburgh; Prof. Stefano Panzeri, Italian Institute of
 Technology Center for Neuroscience and Cognitive Systems, Trento; and
-Prof. Alex Thiele, School of Psychology, Newcastle University.
+Prof. Alex Thiele, School of Psychology, Newcastle University; with
+further collaboration from Nikos K. Logothetis, Max Planck Institute for
+Biological Cybernetics.
 
 Education
 =========
