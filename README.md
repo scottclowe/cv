@@ -133,15 +133,15 @@ Journal articles
     modulated information transfer”, *PLOS Biology*. [DOI:
     10.1371/journal.pbio.1002257](https://doi.org/10.1371/journal.pbio.1002257).
 
+-   Janelle Pakan, Scott C. Lowe, Evelyn Dylda, Sander Keemink,
+    Christopher Coutts, Nathalie L. Rochefort, (in review), “Behavioural
+    state modulation of inhibitory activity is context-dependent in
+    mouse V1”.
+
 -   Scott C. Lowe, Daniel Zaldivar, Yusuke Murayama, Mark C. W. van
     Rossum, Nikos K. Logothetis, Stefano Panzeri (to be submitted),
     “Lamina and Frequency Distribution of Information in Primary Visual
     Cortex”.
-
--   Janelle M. P. Pakan\*, Scott C. Lowe\*, Evelyn Dylda, Sander W.
-    Keemink, Nathalie L. Rochefort (in preparation), “Visual Stimulation
-    Supresses Differences Between Inhibitory Neurons in Mouse Primary
-    Visual Cortex”.
 
 -   Sander W. Keemink\*, Scott C. Lowe\*, Janelle M. P. Pakan, Mark C.
     W. van Rossum, Nathalie L. Rochefort (in preparation), “Undersampled
