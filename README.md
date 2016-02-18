@@ -29,6 +29,11 @@ Biological Cybernetics.
 Education
 =========
 
+-   Machine Learning by Stanford University on Coursera. (Grade
+    achieved: 100%)
+    [Certificate](https://www.coursera.org/account/accomplishments/records/C3BHEHRLC4HT)
+    earned on February 14, 2016.
+
 -   **MSc with Distinction**, in Neuroinformatics by Research,
     University of Edinburgh. <span>(Average grade is 75.33%. For
     comparison, a Distinction at  ≥ 70% is approximately equivalent to
