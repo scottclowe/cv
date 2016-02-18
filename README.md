@@ -208,5 +208,5 @@ Theses & Dissertations
     perceptual learning data from macaque V1 and V4”. Master of Science
     by Research thesis, University of Edinburgh.
 
--   Scott C. Lowe (2011), “Artifical Neural Networks”. Master of Natural
-    Sciences (Mathematics) dissertation, Durham University.
+-   Scott C. Lowe (2011), “On Artifical Neural Networks”. Master of
+    Natural Sciences (Mathematics) dissertation, Durham University.
