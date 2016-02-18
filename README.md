@@ -72,33 +72,33 @@ Education
 Employment History
 ==================
 
--   [t]<span>0.2</span> <span>U. of Edinburgh,  
+-   <span>U. of Edinburgh,  
     Edinburgh  
     U.K.</span>
 
-    [t]<span>0.8</span> **Technical Research Assistant.**
+    **Technical Research Assistant.**
     <span>Development of tools for analysis of calcium imaging data from
     mouse primary visual cortex with the Rochefort Lab, Centre for
     Integrative Physiology.</span>
 
--   [t]<span>0.2</span> <span>FleXtel Ltd,  
+-   <span>FleXtel Ltd,  
     Sandbach,  
     Cheshire  
     U.K.</span>
 
-    [t]<span>0.8</span> **Web Technician.** <span>Programming in PHP for
+    **Web Technician.** <span>Programming in PHP for
     telecoms company. Designed and coded new website selling isolated
     consumer product. Developed market-leading algorithms to price
     telephone numbers patterns based on memorability of both numeric
     patterns and alphadial patterns
     <http://www.flextel.com/numbers/>.</span>
 
--   [t]<span>0.2</span> <span>Dept. of Physics,  
+-   <span>Dept. of Physics,  
     Durham University,  
     Durham  
     U.K.</span>
 
-    [t]<span>0.8</span> **Physics Studentship.** <span>Programming in
+    **Physics Studentship.** <span>Programming in
     MATLAB to simulate Rydberg atoms and their interactions.</span>
 
 Grants, honors & awards
