@@ -144,9 +144,8 @@ Journal articles
     Cortex”.
 
 -   Sander W. Keemink\*, Scott C. Lowe\*, Janelle M. P. Pakan, Mark C.
-    W. van Rossum, Nathalie L. Rochefort (in preparation), “Undersampled
-    ICA with Baseline-correction for Extraction of Calcium Imaging
-    Signals”.
+    W. van Rossum, Nathalie L. Rochefort (in preparation), “FISSA: Fast
+    2-photon signal extraction and separation”.
 
 -   Scott C. Lowe, Xing Chen, Alex Thiele, Mark C. W. van Rossum,
     Stefano Panzeri (in preparation), “Changes in V1 and V4 encoding of
