@@ -43,6 +43,8 @@ fi
 
 # Generate target from source
 pandoc -s "$SOURCE" -o "$TARGET" -t markdown_strict --normalize
+# Cleanup random left overs from minipages
+sed -i 's|\[t\]<span>0\.[0-9]*</span> ||' "$TARGET"
 # Stage the generated changes
 git add $TARGET
 
