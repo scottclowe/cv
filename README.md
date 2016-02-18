@@ -114,6 +114,7 @@ hosted by Kaggle.
 
 Winner of “Most Viable Business Idea” award, [Amazon Scotland Hackathon
 2013](http://www.meetup.com/Amazon-UK-Hackathon-Group/events/108265382/).
+
 Awarded a 4-year scholarship by the University of Edinburgh School of
 Informatics Doctoral Training Centre in Neuroinformatics, with funding
 from grants EP/F500385/1 and BB/F529254/1 from the UK Engineering and
