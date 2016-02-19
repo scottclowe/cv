@@ -1,442 +1,255 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% http://www.latextemplates.com/template/compact-academic-cv
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Compact Academic CV
-% LaTeX Template
-% Version 1.0 (10/6/2012)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Dario Taraborelli (http://nitens.org/taraborelli/home)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important:
-% This template needs to be compiled using XeLaTeX
-%
-% Note: this template has the option to use the Hoefler Text font, see the
-% font configurations section below for instructions on using this font
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 %
-\documentclass[11pt, a4paper]{article} % Document font size and paper size
+\documentclass[11pt, a4paper, sans]{moderncv}      % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 %
-\usepackage{geometry} % Allows the configuration of document margins
-\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in} % Document margin settings
-\setlength\parindent{0in} % Remove paragraph indentation
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 %
-\newcommand{\withindent}{\setlength\parindent{15pt}}
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 %
-\usepackage[usenames,dvipsnames]{color} % Custom colors
+% personal data
+\name{Scott C.}{Lowe}
+%\title{Curriculum Vitae}
+% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\address{University of Edinburgh, Informatics Forum, 10 Crichton Street}{Edinburgh, EH8~9AB}{U.K.}
+% optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[mobile]{+1~(234)~567~890}
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{scottclowe@gmail.com}
+%\homepage{www.johndoe.com}
+\social[linkedin]{scottclowe}
+%\social[twitter]{scottclowe}
+\social[github]{scottclowe}
+\social[kaggle]{scottclowe}
+\extrainfo{Nationality: British}
+%\photo[64pt][0.4pt]{picture}
+% optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}
 %
-\usepackage{sectsty} % Allows changing the font options for sections in a document
-\usepackage[normalem]{ulem} % Custom underlining
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
 %
-\usepackage{marginnote} % For margin years
-\newcommand{\years}[1]{\marginnote{\scriptsize #1}} % New command for including margin years
-\renewcommand*{\raggedleftmarginnote}{}
-\setlength{\marginparsep}{6pt} % Slightly increase the distance of the margin years from the content
-\reversemarginpar
-%
-% PDF setup - set your name and the title of the document to be incorporated into the final PDF file meta-information
-\usepackage[bookmarks, colorlinks, breaklinks, pdftitle={Scott Lowe - Curriculum Vitae},pdfauthor={Scott Lowe}]{hyperref} 
-\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} % Link colors
-%
-% Stolen from http://jblevins.org/projects/cv-template/
-% Make lists without bullets
-\renewenvironment{itemize}{
-  \begin{list}{}{
-    \setlength{\leftmargin}{0em}
-  }
-}{
-  \end{list}
-}
-%
-%----------------------------------------------------------------------------------------
-%	FONT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-%
-% \usepackage{ifxetex}
-%
-% \ifxetex
-% %   \usepackage{fontspec} % Allows the use of OpenType fonts
-% %   \usepackage{xunicode} % Allows generation of unicode characters from accented glyphs
-% %   \defaultfontfeatures{Mapping=tex-text} % To support LaTeX quoting style
-%   \setromanfont{Hoefler Text}
-% \else
-%   \usepackage[utf8]{inputenc}
-%   \usepackage[T1]{fontenc}
-%   \usepackage[light,math]{iwona}
-%   \renewcommand*\rmdefault{iwona}\normalfont\upshape
-%   \renewcommand{\rmdefault}{iwona}
-% \fi
-%
-% Two font choices are available in this template, the default is Linux Libertine, available for free at: http://www.linuxlibertine.org while the secondary choice is Hoefler Text which comes bundled with Mac OSX.
-% To use Hoefler Text, comment out the Linux Libertine block below and uncomment the Hoefler Text block. You will also need to replace the "\&" characters with "\amper{}" in section titles.
-%
-% % Linux Libertine Font (default)
-% \setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O} % Main text font
-%\setmonofont[Scale=0.8]{Monaco} % Set mono font (e.g. phone numbers)
-\sectionfont{\mdseries\upshape\Large} % Set font options for sections
-\subsectionfont{\mdseries\scshape\normalsize} % Set font options for subsections
-\subsubsectionfont{\mdseries\upshape\large} % Set font options for subsubsections
-% \chardef\&="E050 % Custom ampersand character
-%
-% % Hoefler Text Font (bundled with Mac OSX)
-% %\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{Hoefler Text} % Main text font
-% %\setmonofont[Scale=0.8]{Monaco} % Set mono font (e.g. phone numbers)
-% %\setsansfont[Scale=0.9]{Optima Regular} % Set sans font, used in the main name and titles in the document
-% %\newcommand{\amper}{{\fontspec[Scale=.95]{Hoefler Text}\selectfont\itshape\&}} % Custom ampersand character
-% %\sectionfont{\sffamily\mdseries\large\underline} % Set font options for sections
-% %\subsectionfont{\rmfamily\mdseries\scshape\normalsize} % Set font options for subsections
-% %\subsubsectionfont{\rmfamily\bfseries\upshape\normalsize} % Set font options for subsubsections
-%
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
 %----------------------------------------------------------------------------------------
 %
 \usepackage{multirow}
 %
+%\usepackage[usenames,dvipsnames]{xcolor}
+%\newcommand\colorhref[3][MidnightBlue]{\href{#2}{\color{#1}#3}}
+\newcommand\colorhref[2]{\href{#1}{\textcolor[HTML]{006794}{#2}}}
+%
 \begin{document}
 %
-%----------------------------------------------------------------------------------------
-%	CONTACT AND GENERAL INFORMATION SECTION
-%----------------------------------------------------------------------------------------
-%
-\textbf{\LARGE Scott C. Lowe}\\[1cm] % Your name
-%
-% Your address
-University of Edinburgh\\
-Informatics Forum\\
-10 Crichton Street\\
-Edinburgh, EH8~9AB, U.K.
-%
-\\[.2cm]
-%
-% Email: \href{mailto:someone@example.com}{someone@example.com} % Your email address
-% \textsc{url}: \href{link}{link}\\ % Your academic/personal website
-%
-\\[.2cm]
-%
-Linkedin: \href{https://uk.linkedin.com/in/scottclowe}{uk.linkedin.com/in/scottclowe}\\
-GitHub: \href{https://github.com/scottclowe}{scottclowe}\\
-Kaggle: \href{https://www.kaggle.com/scottclowe}{scottclowe}\\
-%
-%\vfill % Whitespace between contact information and specific CV information
-%
 %------------------------------------------------
+\makecvtitle
 
-Nationality: British % Your nationality
-%
-\\%[.2cm]
-
-%------------------------------------------------
-
-\section*{Current position}
+\section{Current position}
 % Your current or previous employment position
 
-\textbf{Ph.D. candidate}, Institute for Adaptive and Neural Computation, School of Informatics, University of Edinburgh.
+\cventry{2011--2016}{Ph.D. candidate}{Institute for Adaptive and Neural Computation, School of Informatics}{University of Edinburgh}{}{Project: Analysis of experimental data from multi-electrode recordings in the visual cortex. Supervisors: Mark van Rossum, Stefano Panzeri and Alex Thiele.}
+%\cvitem{description}{Short thesis abstract}
 
-\withindent%\small
-Project: Analysis of experimental data from multi-electrode recordings in the visual cortex.
 
-\withindent%\footnotesize
-Supervised jointly by Dr Mark van Rossum, School of Informatics, University of Edinburgh; Prof. Stefano Panzeri, Italian Institute of Technology Center for Neuroscience and Cognitive Systems, Trento; and Prof. Alex Thiele, School of Psychology, Newcastle University; with further collaboration from Nikos K. Logothetis, Max Planck Institute for Biological Cybernetics.
+\section{Education}
+% arguments 3 to 6 can be left empty
+%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
 
-%------------------------------------------------
-%
-%\section*{Areas of specialization}
-%% Your primary areas of research interest
-%{\withindent
-%Analysis and modelling of experimental data from multi-electrode recordings in the visual cortex.
-%
-%My current research interest centers around the canonical microcircuit in the mammalian neocortex. I am investigating the organisation of the single-column microcircuit which spans the depth of the cortex, and is repeated across the cortical plane. By analysing recordings taken along the laminar depth of the macaque primary visual cortex during presentation of a natural video scene, I am studying the distribution of visual information contained in the localised current source densities as a function of depth and spectral frequency.
-%In addition to this, I am studying the causal interactions between the cortical laminae.
-%
-%My research focus during my {Master in Neuroinformatics by Research} was the changes in neural coding and neural information exhibited by the multi-unit spiking activity in macaque visual cortices V1 and V4 during the perceptual learning associated with a contrast discrimination task.
-% This project was done in collaboration with Prof. Alex Thiele at Newcastle University.
-%}
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-%
-% \section*{Appointments held}
-% 
-%
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\section*{Education}
-
-\begin{itemize}
-%
 %\item \years{2012--present}{PhD candidate} in Neuroinformatics and Computational Neuroscience, University of Edinburgh
-%
-\item \years{Feb 2016}Machine Learning by Stanford University on Coursera. \footnotesize(Grade achieved: $100\%$)
-\href{https://www.coursera.org/account/accomplishments/records/C3BHEHRLC4HT}{Certificate} earned on February 14, 2016.
-%
-\item \years{2011--2012}\textbf{MSc with Distinction}, in Neuroinformatics by Research, University of Edinburgh. {\footnotesize(Average grade is $75.33\%$.
-For comparison, a Distinction at $\ge70\%$ is approximately equivalent to $\ge3.75/4$ US GPA.)}\\
-{\footnotesize
-\begin{tabular}{lp{11.5cm}}
- &Neural Computation, Principles of Neuroscience, Probabilistic Modelling and Reasoning, Neural Information Processing, Computational Neuroscience of Vision, Neuroinformatics Research, Research Thesis (Neuroinformatics; Topic: \emph{An information theoretic analysis of perceptual learning data from macaque V1 and V4})\\
-\end{tabular}
+
+\cventry{2011--2012}{MSc with Distinction, in Neuroinformatics by Research}{University of Edinburgh}{Edinburgh, UK}{\textit{average grade of $75.33\%$%
+% --- for comparison, a Distinction at $\ge70\%$ is approximately equivalent to $\ge3.75/4$ US GPA
+}}{%
+%\begin{tabular}{lp{11.5cm}}
+% & Neural Computation, Principles of Neuroscience, Probabilistic Modelling and Reasoning, Neural Information Processing, Computational Neuroscience of Vision, Neuroinformatics Research, Research Thesis (Neuroinformatics; Topic: \emph{An information theoretic analysis of perceptual learning data from macaque V1 and V4})\\
+%\end{tabular}
+Thesis: \emph{An information theoretic analysis of perceptual learning data from macaque V1 and V4},  Supervisors: Alex Thiele and Stefano Panzeri.
 }
-%
-\item \years{2007--2011}\textbf{MSci with First Class Honours}, in Natural Sciences (Mathematics and Physics), Durham University. {\footnotesize(Overall grade is $73.37\%$.
-For comparison, a First Class at $\ge70\%$ is approximately equivalent to $\ge3.75/4$ US GPA.)}\\
-{\footnotesize
-\begin{tabular}{lp{11.5cm}}
-Y1:&Core Maths A, Core Maths B1, Foundations of Physics 1, Discovery Skills in Physics\\
-Y2:&Complex Analysis, Linear Algebra, Analysis in Many Variables, Foundations of Physics 2, Thermal and Condensed Matter Physics\\
-Y3:&Differential Geometry, Dynamical Systems, Continuum Mechanics, Foundations of Physics 3, Theoretical Physics\\
-Y4:&Elliptic Functions, Mathematical Finance, Partial Differential Equations, Solitons, Project (Mathematics; Topic: \emph{Artifical Neural Networks})\\
-\end{tabular}
+
+\cventry{2007--2011}{MSci with First Class Honours, in Natural Sciences (Mathematics and Physics)}{Durham University}{Durham, UK}{\textit{overall grade is $73.37\%$%
+% --- for comparison, a First Class at $\ge70\%$ is approximately equivalent to $\ge3.75/4$ US GPA
+}}{%
+%\begin{tabular}{lp{11.5cm}}
+%Y1:&~Core Maths A, Core Maths B1, Foundations of Physics 1, Discovery Skills in Physics\\
+%Y2:&~Complex Analysis, Linear Algebra, Analysis in Many Variables, Foundations of Physics 2, Thermal and Condensed Matter Physics\\
+%Y3:&~Differential Geometry, Dynamical Systems, Continuum Mechanics, Foundations of Physics 3, Theoretical Physics\\
+%Y4:&~Elliptic Functions, Mathematical Finance, Partial Differential Equations, Solitons, Project (Mathematics; Topic: \emph{Artifical Neural Networks})\\
+%\end{tabular}
+Thesis: \emph{On Artifical Neural Networks},  Supervisor: Ian Jermyn.
 }
-%
-\end{itemize}
 
-%----------------------------------------------------------------------------------------
-%   EMPLOYMENT HISTORY
-%----------------------------------------------------------------------------------------
 
-\section*{Employment History}
+%\section{Master thesis}
+%\cvitem{title}{\emph{An information theoretic analysis of perceptual learning data from macaque V1 and V4}, Master of Science by Research thesis, University of Edinburgh.}
+%\cvitem{year}{2012}
+%\cvitem{supervisors}{Alex Thiele and Stefano Panzeri}
+%%\cvitem{description}{Short thesis abstract}
+%
+%
+%\section{Master thesis}
+%\cvitem{title}{\emph{On Artifical Neural Networks}, Master of Natural Sciences (Mathematics) dissertation, Durham University}
+%\cvitem{year}{2011}
+%\cvitem{supervisors}{Ian Jermyn}
+%%\cvitem{description}{Short thesis abstract}
 
-\begin{itemize}
-%
-\item 
-\begin{minipage}[t]{0.2\linewidth}
-\years{\centering2015-06-01\\to\\present}{\scriptsize
-U. of Edinburgh,\\
-Edinburgh\\
-U.K.
-}%
-\end{minipage}
-%
-\begin{minipage}[t]{0.8\linewidth}
-\textbf{Technical Research Assistant.}
-{Development of tools for analysis of calcium imaging data from mouse primary visual cortex with the Rochefort Lab, Centre for Integrative Physiology.
+\section{Online Courses}
+
+\cventry{Feb 2016}{Machine Learning}{Stanford University}{via Coursera}{\colorhref{https://www.coursera.org/account/accomplishments/records/C3BHEHRLC4HT}{\textit{Grade achieved: $100\%$}}}{}
+
+
+\section{Experience}
+
+%\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.}
+
+\cventry{2015}{Technical Research Assistant}{Rochefort Lab, Centre for Integrative Physiology}{University of Edinburgh}{}{Development of tools for analysis of calcium imaging data from mouse primary visual cortex.
 %\url{https://github.com/rochefort-lab}.
-}%
-\end{minipage}
-%
-%
-% \item 
-% \begin{minipage}[t]{0.2\linewidth}
-% \years{\centering2012-10-01\\to\\present}{\scriptsize
-% Sch. of Informatics\\
-% University of Edinburgh,\\
-% Edinburgh\\
-% U.K.
-% }%
-% \end{minipage}
-% %
-% \begin{minipage}[t]{0.8\linewidth}
-% \textbf{\textsc{Ph.D.} candidate}
-% {in Neuroinformatics. Analysis of experimental data from multi-electrode recordings in the visual cortex.}%
-% \end{minipage}
-%
-%
-\item 
-\begin{minipage}[t]{0.2\linewidth}
-\years{\centering2010-07-05\\to\\2010-09-17}{\scriptsize
-FleXtel Ltd,\\
-%FleXtel House,\\
-%The Commons,\\
-Sandbach,\\
-Cheshire\\
-%CW11~1EG\\
-U.K.
-}%
-\end{minipage}
-%
-\begin{minipage}[t]{0.8\linewidth}
-\textbf{Web Technician.}
-{Programming in PHP for telecoms company. Designed and coded new website selling isolated consumer product. Developed market-leading algorithms to price telephone numbers patterns based on memorability of both numeric patterns and alphadial patterns \url{http://www.flextel.com/numbers/}.}%
-\end{minipage}
-%
-%
-\item
-\begin{minipage}[t]{0.2\linewidth}
-\years{\centering2009-08-31\\to\\2009-09-29}{\scriptsize
-Dept. of Physics,\\
-Durham University,\\
-%South Road,\\
-Durham\\
-%DH1 3LE\\
-U.K.
-}%
-\end{minipage}
-%
-\begin{minipage}[t]{0.8\linewidth}
-\textbf{Physics Studentship.}
-{Programming in MATLAB to simulate Rydberg atoms and their interactions.}%
-\end{minipage}
-%
-%
-\end{itemize}
+}
 
-%----------------------------------------------------------------------------------------
-%
-% \section*{References}
-%
-%
+\cventry{2010}{Web Technician}{FleXtel Ltd}{Sandbach, UK}{}{Programming in PHP for telecoms company. Designed and coded new website selling isolated consumer product. Developed market-leading algorithms to price telephone numbers patterns based on memorability of both numeric patterns and alphadial patterns \url{http://www.flextel.com/numbers/}.
+}
+
+\cventry{Sept, 2009}{Physics Studentship}{University of Durham}{Durham}{}{Programming in MATLAB to simulate Rydberg atoms and their interactions.
+}
+
+
 %----------------------------------------------------------------------------------------
 %	GRANTS, HONORS AND AWARDS SECTION
 %----------------------------------------------------------------------------------------
 
-\section*{Grants, honors \& awards}
-%
-\years{2015}Placed 57th out of 1049 in the \href{https://www.kaggle.com/c/datasciencebowl}{National Data Science Bowl} plankton species classification challenge, hosted by Kaggle.
+\section{Grants, honors \& awards}
 
-\years{2014}Placed 16th out of 504 in the \href{https://www.kaggle.com/c/seizure-prediction}{American Epilepsy Society Seizure Prediction Challenge}, hosted by Kaggle.
+\cvitem{2015}{
+Placed 57th out of 1049 in the \colorhref{https://www.kaggle.com/c/datasciencebowl}{National Data Science Bowl} plankton species classification challenge, hosted by Kaggle.
+}
 
-\years{2013}Winner of ``Most Viable Business Idea'' award, \href{http://www.meetup.com/Amazon-UK-Hackathon-Group/events/108265382/}{Amazon Scotland Hackathon 2013}.
+\cvitem{2014}{
+Placed 16th out of 504 in the \colorhref{https://www.kaggle.com/c/seizure-prediction}{American Epilepsy Society Seizure Prediction Challenge}, hosted by Kaggle.
+}
 
-\years{2011}Awarded a 4-year scholarship by the University of Edinburgh School of Informatics Doctoral Training Centre in Neuroinformatics,
-with funding from grants EP/F500385/1 and  BB/F529254/1 from the UK Engineering and Physical Sciences Research Council (EPSRC), UK Biotechnology and Biological Sciences Research Council (BBSRC), and the UK Medical Research Council (MRC).
-% 
-% \years{1921}Nobel Prize in Physics, Nobel Foundation
+\cvitem{2013}{
+Winner of ``Most Viable Business Idea'' award, \colorhref{http://www.meetup.com/Amazon-UK-Hackathon-Group/events/108265382/}{Amazon Scotland Hackathon 2013}.
+}
+
+\cvitem{2011}{
+Awarded a 4-year scholarship by the University of Edinburgh School of Informatics Doctoral Training Centre in Neuroinformatics, with funding from grants EP/F500385/1 and  BB/F529254/1 from the UK Engineering and Physical Sciences Research Council (EPSRC), UK Biotechnology and Biological Sciences Research Council (BBSRC), and the UK Medical Research Council (MRC).
+}
+
+%----------------------------------------------------------------------------------------
+
+\section{Computer skills}
+
+\cvitem{Programming}{Python, MATLAB}
+\cvitem{Web dev}{PHP, Javascript, AJAX, HTML, XHTML}
+\cvitem{Database}{SQL, MySQL}
+\cvitem{Cloud computing}{Amazon EC2}
+
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS AND TALKS SECTION
 %----------------------------------------------------------------------------------------
 
-\section*{Publications}
-%
-%
-\subsection*{Journal articles}
-%
-\begin{itemize}
-%
-\item
-Michel Besserve, Scott C. Lowe, Nikos, K. Logothetis, Bernhard Sch\"{o}lkopf, Stefano Panzeri (2015, September), ``Shifts of gamma phase across primary visual cortical sites reflect dynamic stimulus modulated information transfer'', \emph{PLOS Biology}. \href{https://doi.org/10.1371/journal.pbio.1002257}{DOI: 10.1371/journal.pbio.1002257}.
-%
-\item
+\section{Publications}
+
+% % Publications from a BibTeX file without multibib
+% %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+% %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}    
+
+\subsection{Journal articles}
+
+\cvitem{Sept, 2015}{
+Michel Besserve, Scott C. Lowe, Nikos, K. Logothetis, Bernhard Sch\"{o}lkopf, Stefano Panzeri (2015, September), ``Shifts of gamma phase across primary visual cortical sites reflect dynamic stimulus modulated information transfer'', \emph{PLOS Biology}. \colorhref{https://doi.org/10.1371/journal.pbio.1002257}{DOI: 10.1371/journal.pbio.1002257}.
+}
+
+\cvitem{---}{
 Janelle Pakan, Scott C. Lowe, Evelyn Dylda, Sander Keemink, Christopher Coutts, Nathalie L. Rochefort, (in review), ``Behavioural state modulation of inhibitory activity is context-dependent in mouse V1''.
-%
-\item
+}
+
+\cvitem{---}{
 Scott C. Lowe, Daniel Zaldivar, Yusuke Murayama, Mark C. W. van Rossum, Nikos K. Logothetis, Stefano Panzeri (to be submitted), ``Lamina and Frequency Distribution of Information in Primary Visual Cortex''.
-%
-\item
+}
+
+\cvitem{---}{
 Sander W. Keemink*, Scott C. Lowe*, Janelle M. P. Pakan, Mark C. W. van Rossum, Nathalie L. Rochefort (in preparation), ``FISSA: Fast 2-photon signal extraction and separation''.
-%
-\item
+}
+
+\cvitem{---}{
 Scott C. Lowe, Xing Chen, Alex Thiele, Mark C. W. van Rossum, Stefano Panzeri (in preparation), ``Changes in V1 and V4 encoding of visual contrast during perceptual learning''.
-%
-\item
+}
+
+\cvitem{---}{
 Scott C. Lowe, Finlay Maguire, Gavin Gray (in preparation), ``Predicting the onset of epileptic seizures from intracranial-EEG: which features are most useful''.
-%
-\end{itemize}
-%
-%
-\subsection*{Talks}
-%
-\begin{itemize}
-%
-\item
+}
+
+
+\subsection{Talks}
+
+\cvitem{May, 2015}{
 Scott C. Lowe (2015, May),``What does LFP encode?''.
 {Presented at the \emph{CINPLA Workshop: ``Inferring network activity from LFPs''}, University of Oslo, Oslo, Norway.}
-%
-\end{itemize}
+}
 
+%\cvitem{}{
 % Scott C. Lowe (2014, January),``Independent channels of information in visual cortical Local Field
 % Potentials''.
 % {Presented at the \emph{Institute for Adaptive and Neural Computation Workshop, Jan 14, 2014}, Edinburgh.}
-%
-%
-\subsection*{Poster Presentations}
+%}
+
+\subsection{Poster Presentations}
 %
 % Janelle Pakan, Scott C. Lowe, ..., Nathalie Rochefort. EVCM
 %
 % Sander Keemink, Janelle Pakan, Scott C. Lowe, ..., Nathalie Rochefort. EVCM
 
-\begin{itemize}
-%
-\item
+\cvitem{Apr, 2015}{
 Scott C. Lowe, \textit{et al.} (2015, April), ``Cortical dynamics across V1 laminae generate independent frequency channels encoding visual information''.
-Presented at the \emph{BNA2015: Festival of Neuroscience}, Edinburgh, UK. Poster Reference: \href{http://www.bna.org.uk/static/docs/BNA2015/BNA2015-Abstract-Book.pdf}{P2-C-029}.
-%
-\item
+Presented at the \emph{BNA2015: Festival of Neuroscience}, Edinburgh, UK. Poster Reference: \colorhref{http://www.bna.org.uk/static/docs/BNA2015/BNA2015-Abstract-Book.pdf}{P2-C-029}.
+}
+
+\cvitem{Nov, 2014}{
 Scott C. Lowe, \textit{et al.} (2014, November), ``Different cortical layers in V1 encode different visual information in different frequency bands''.
-Presented at the \emph{2014 Meeting of the Society for Neuroscience}, Washington DC, USA. Program No. \href{http://www.abstractsonline.com/Plan/ViewAbstract.aspx?sKey=a018159d-9116-492d-b234-b4c53acd5260&cKey=e909b23c-40c3-4371-8816-345dfe3e6c3c&mKey=54c85d94-6d69-4b09-afaa-502c0e680ca7}{532.19}.
-%
-\item
+Presented at the \emph{2014 Meeting of the Society for Neuroscience}, Washington DC, USA. Program No. \colorhref{http://www.abstractsonline.com/Plan/ViewAbstract.aspx?sKey=a018159d-9116-492d-b234-b4c53acd5260&cKey=e909b23c-40c3-4371-8816-345dfe3e6c3c&mKey=54c85d94-6d69-4b09-afaa-502c0e680ca7}{532.19}.
+}
+
+\cvitem{July, 2014}{
 Scott C. Lowe, \textit{et al.} (2014, July), ``Quantification of the Laminar and Frequency Structure of Information in Primary Visual Cortex''.
-Presented at the \emph{9th FENS Forum of Neuroscience}, Milan, Italy. Abstract number \href{http://fens2014.meetingxpert.net/FENS_427/poster_102139/program.aspx}{FENS-2860}.
-%
-\item
+Presented at the \emph{9th FENS Forum of Neuroscience}, Milan, Italy. Abstract number \colorhref{http://fens2014.meetingxpert.net/FENS_427/poster_102139/program.aspx}{FENS-2860}.
+}
+
+\cvitem{July, 2014}{
 Scott C. Lowe, \textit{et al.} (2014, July), ``Quantification of the Laminar and Frequency Structure of Information in Primary Visual Cortex''.
 Presented at the \emph{AREADNE 2014 session}, Santorini, Greece.
-%
-\item
+}
+
+\cvitem{Nov, 2013}{
 Scott C. Lowe, \textit{et al.} (2013, November), ``Decoding spiking activity in V4, but not V1, correlates with behaviour in perceptual learning''.
-Presented at the \emph{2013 Meeting of the Society for Neuroscience}, San Diego, USA. Program No. \href{http://www.abstractsonline.com/Plan/ViewAbstract.aspx?sKey=a69ca081-1031-4c5e-917c-b57b7b7255cf&cKey=5e73e1d9-7177-4207-9890-3efb2a57985b&mKey=8d2a5bec-4825-4cd6-9439-b42bb151d1cf}{555.11.}
-%
-\item
+Presented at the \emph{2013 Meeting of the Society for Neuroscience}, San Diego, USA. Program No. \colorhref{http://www.abstractsonline.com/Plan/ViewAbstract.aspx?sKey=a69ca081-1031-4c5e-917c-b57b7b7255cf&cKey=5e73e1d9-7177-4207-9890-3efb2a57985b&mKey=8d2a5bec-4825-4cd6-9439-b42bb151d1cf}{555.11.}
+}
+
+\cvitem{July, 2013}{
 Scott C. Lowe, \textit{et al.} (2013, July), ``Decoding spiking activity in V4, but not V1, correlates with behavioural performance in perceptual learning task''.
 Presented at the \emph{Twenty Second Annual Computational Neuroscience Meeting: CNS*2013}, Paris, France.
-\emph{BMC Neuroscience} 2013, \textbf{14}(Suppl 1):P385  \href{http://dx.doi.org/10.1186/1471-2202-14-S1-P385}{doi:10.1186/1471-2202-14-S1-P385}.
-%
-\end{itemize}
-%
-%
-\subsection*{Theses \& Dissertations}
-%
-\begin{itemize}
-%
-\item
-Scott C. Lowe (2012), ``An information theoretic analysis of perceptual learning data from macaque V1 and V4''.
-Master of Science by Research thesis, University of Edinburgh.
-%
-\item
-Scott C. Lowe (2011), ``On Artifical Neural Networks''.
-Master of Natural Sciences (Mathematics) dissertation, Durham University.
-%
-\end{itemize}
-%
-%
-%------------------------------------------------
-%
-% \subsection*{Books}
-%
-%
-% %------------------------------------------------
-%
-% \subsection*{Newspaper articles}
-%
-%
-%----------------------------------------------------------------------------------------
-%	TEACHING SECTION
-%----------------------------------------------------------------------------------------
-%
-% \section*{Teaching}
-%
-%
-%------------------------------------------------
-%
-% \section*{Service to the profession}
-%
-%
-%------------------------------------------------
-%
-%\vfill{} % Whitespace before final footer
-%
-%----------------------------------------------------------------------------------------
-%	FINAL FOOTER
-%----------------------------------------------------------------------------------------
-%
-% \begin{center}
-% % Any final footer text such as a URL to the latest version of your CV, last updated date, compiled in XeTeX, etc
-% {\scriptsize Last updated: \today} 
-% \end{center}
-%
+\emph{BMC Neuroscience} 2013, \textbf{14}(Suppl 1):P385  \colorhref{http://dx.doi.org/10.1186/1471-2202-14-S1-P385}{doi:10.1186/1471-2202-14-S1-P385}.
+}
+
 %----------------------------------------------------------------------------------------
 %
 \end{document}
