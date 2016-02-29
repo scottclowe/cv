@@ -10,6 +10,9 @@ Online Courses
 Experience
 ==========
 
+Open Source Projects
+====================
+
 Grants, honors & awards
 =======================
 
