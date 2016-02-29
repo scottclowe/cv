@@ -28,6 +28,9 @@ Talks
 Poster Presentations
 --------------------
 
+Teaching Experience
+===================
+
 Computer skills
 ===============
 
