@@ -34,5 +34,8 @@ Teaching Experience
 Computer skills
 ===============
 
+Responsibilities
+================
+
 References
 ==========
