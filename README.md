@@ -1,41 +1,6 @@
-Current position
+Curriculum Vitae
 ================
 
-Education
-=========
+You can read my Curriculum Vitae [as a PDF](cv.pdf).
 
-Online Courses
-==============
-
-Experience
-==========
-
-Open Source Projects
-====================
-
-Grants, honors & awards
-=======================
-
-Publications
-============
-
-Journal articles
-----------------
-
-Talks
------
-
-Poster Presentations
---------------------
-
-Teaching Experience
-===================
-
-Computer skills
-===============
-
-Responsibilities
-================
-
-References
-==========
+If you like, you can [check-out my website](https://scottclowe.github.io) too.
