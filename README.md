@@ -16,9 +16,6 @@ Open Source Projects
 Grants, honors & awards
 =======================
 
-Computer skills
-===============
-
 Publications
 ============
 
@@ -30,6 +27,9 @@ Talks
 
 Poster Presentations
 --------------------
+
+Computer skills
+===============
 
 References
 ==========
