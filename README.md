@@ -16,9 +16,6 @@ Grants, honors & awards
 Computer skills
 ===============
 
-References
-==========
-
 Publications
 ============
 
@@ -30,3 +27,6 @@ Talks
 
 Poster Presentations
 --------------------
+
+References
+==========
