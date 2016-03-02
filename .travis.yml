@@ -1,0 +1,13 @@
+language: generic
+
+###############################################################################
+before_install:
+  - travis_retry sudo apt-get update
+  - travis_retry sudo apt-get install -y --no-install-recommends
+        texlive
+        texlive-latex-extra
+        texlive-fonts-extra
+
+###############################################################################
+script:
+  - pdflatex -halt-on-error -interaction nonstopmode cv.tex
