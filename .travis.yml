@@ -3,10 +3,7 @@ language: generic
 ###############################################################################
 before_install:
   - travis_retry sudo apt-get update
-  - travis_retry sudo apt-get install -y --no-install-recommends
-        texlive
-        texlive-latex-extra
-        texlive-fonts-extra
+  - travis_retry sudo apt-get install -y texlive-full
 
 ###############################################################################
 script:
