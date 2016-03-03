@@ -6,8 +6,11 @@ before_install:
   - travis_retry wget https://github.com/scottkosty/install-tl-ubuntu/raw/master/install-tl-ubuntu
   - chmod +x ./install-tl-ubuntu
   - sudo ./install-tl-ubuntu
+  - cat /etc/environment
   - echo "$PATH";
   - export PATH="$PATH";
+  - while read -r env; do export "$env"; done < /etc/environment
+  - echo "$PATH";
   - hash -r
 
 ###############################################################################
