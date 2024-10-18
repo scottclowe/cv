@@ -62,6 +62,16 @@
 %\newcommand\href[2]{\href{#1}{\textcolor[HTML]{006794}{#2}}}
 %
 \newcommand\arxiv[1]{arXiv:\href{https://arxiv.org/abs/#1}{#1}}
+\newcommand\biorxiv[1]{bioRxiv:\href{https://doi.org/10.1101/#1}{#1}}
+%
+\newcommand{\LilaKari}[0]{\href{https://cs.uwaterloo.ca/~lila/}{Lila Kari}}
+\newcommand{\SageevOore}[0]{\href{https://www.dal.ca/faculty/computerscience/faculty-staff/sageev-oore.html}{Sageev Oore}}
+\newcommand{\StefanoPanzeri}[0]{\href{https://www.iit.it/people-details/-/people/stefano-panzeri}{Stefano Panzeri}}
+\newcommand{\NathalieRochefort}[0]{\href{https://discovery-brain-sciences.ed.ac.uk/our-staff/research-groups/nathalie-rochefort}{Nathalie Rochefort}}
+\newcommand{\MarkvanRossum}[0]{\href{https://www.nottingham.ac.uk/psychology/people/mark.vanrossum}{Mark van Rossum}}
+\newcommand{\GrahamTaylor}[0]{\href{https://www.uoguelph.ca/ceps/people/graham-taylor}{Graham Taylor}}
+\newcommand{\AlexThiele}[0]{\href{https://www.ncl.ac.uk/psychology/people/profile/alexthiele.html}{Alex Thiele}}
+\newcommand{\ThomasTrappenberg}[0]{\href{https://www.dal.ca/faculty/computerscience/faculty-staff/thomas-trappenberg.html}{Thomas Trappenberg}}
 %
 \begin{document}
 %
@@ -73,11 +83,26 @@
 \definecolor{darkgrey}{rgb}{0.45, 0.45, 0.45}
 \hypersetup{linkcolor=darkgrey,citecolor=urlcolor,filecolor=urlcolor,menucolor=urlcolor,runcolor=urlcolor,urlcolor=urlcolor}
 
-\section{Current positions}
+
+\section{Summary}
+
+\cvitem{}{%
+Highly accomplished research scientist with a Ph.D. in Neuroinformatics and over a decade of experience in interdisciplinary research bridging cognitive sciences, deep learning, and artificial intelligence. Proven track record in developing advanced ML models, leading innovative projects, supervising students, and publishing impactful research in multidisciplinary collaborations.
+}{}{}{}{}{}
+
+
+\section{Current position}
 % Your current or previous employment position
 
 \cventry{since 2022}{Postdoctoral Research Fellow}{Vector Institute}{Toronto, Canada}{}{
-Advisors: Prof. Sageev Oore and Prof. Graham Taylor
+\begin{itemize}
+  \item Investigating and developing System 2 reasoning capabilities in Large Language Models [\href{https://arxiv.org/abs/2410.03662}{Paper}].
+  \item Developing multimodal ML models (vision, DNA, and text) to facilitate monitoring of global insect biodiversity, even on previously unseen species [\href{https://arxiv.org/abs/2406.02465}{Paper}, \href{https://arxiv.org/abs/2405.17537}{Paper}, \href{https://arxiv.org/abs/2311.02401}{Paper}].
+  \item Curated and released \href{https://biodiversitygenomics.net/projects/5m-insects/}{BIOSCAN-5M}, a dataset of 5M samples of insects with paired image and DNA barcode data [\href{https://arxiv.org/abs/2406.12723}{Paper}].
+  \item Developing real-time, interactive symbolic music generation, using deep state-space models.
+\end{itemize}
+Responsibilities: lead research projects, supervise students, develop tooling for running experiments used by the rest of the lab.\\
+Advisors: Prof. \SageevOore{} and Prof. \GrahamTaylor{}.
 }
 
 
@@ -85,22 +110,24 @@ Advisors: Prof. Sageev Oore and Prof. Graham Taylor
 % arguments 3 to 6 can be left empty
 %\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
 
-\cventry{2012--2017}{Doctor of Philosophy (Ph.D. in Neuroinformatics)}{Institute for Adaptive and Neural Computation, School of Informatics, U. of Edinburgh}{Edinburgh, UK}{}{\href{http://scottclowe.com/LoweSC_PhD_thesis.pdf}{Thesis}: Decoding information from neural populations in the visual cortex.
+\cventry{2012 -- 2017}{Doctor of Philosophy (Ph.D. in Neuroinformatics)}{Institute for Adaptive and Neural Computation, School of Informatics, U. of Edinburgh}{Edinburgh, UK}{}{\href{http://scottclowe.com/LoweSC_PhD_thesis.pdf}{Thesis}: Decoding information from neural populations in the visual cortex.
 %\href{http://scottclowe.com/LoweSC_PhD_thesis.pdf}{[Thesis PDF]}.
 %\href{http://scottclowe.com/LoweSC_PhD_abstract.pdf}{[Abstract]},
 %\href{http://scottclowe.com/LoweSC_PhD_laysummary.pdf}{[Lay Summary]}.
-Supervisors: Profs Mark van Rossum, Stefano Panzeri, and Alex Thiele.}
+Supervisors: Profs. \MarkvanRossum{}, \StefanoPanzeri{}, and \AlexThiele{}.
+}
 
-\cventry{2011--2012}{MSc with Distinction, in Neuroinformatics by Research}{U. of Edinburgh}{Edinburgh, UK}{\textit{average 75.3\%
+\cventry{2011 -- 2012}{MSc with Distinction, in Neuroinformatics by Research}{U. of Edinburgh}{Edinburgh, UK}{\textit{average 75.3\%
  --- for comparison, a Distinction at $\ge70\%$ is approximately equivalent to $\ge3.75/4$ US GPA%
 }}{%
 %\begin{tabular}{lp{11.5cm}}
 % & Neural Computation, Principles of Neuroscience, Probabilistic Modelling and Reasoning, Neural Information Processing, Computational Neuroscience of Vision, Neuroinformatics Research, Research Thesis (Neuroinformatics; Topic: \emph{An information theoretic analysis of perceptual learning data from macaque V1 and V4})\\
 %\end{tabular}
-Thesis: \emph{An information theoretic analysis of perceptual learning data from macaque V1 and V4},  Supervisors: Profs Alex Thiele and Stefano Panzeri.
+Thesis: \emph{An information theoretic analysis of perceptual learning data from macaque V1 and V4}.
+Supervisors: Prof. \AlexThiele{} and Prof. \StefanoPanzeri{}.
 }
 
-\cventry{2007--2011}{MSci with First Class Honours, in Natural Sciences (Mathematics and Physics)}{Durham University}{Durham, UK}{\textit{average 73.4\%
+\cventry{2007 -- 2011}{MSci with First Class Honours, in Natural Sciences (Mathematics and Physics)}{Durham University}{Durham, UK}{\textit{average 73.4\%
  --- for comparison, a First Class at $\ge70\%$ is approximately equivalent to $\ge3.75/4$ US GPA%
 }}{%
 %\begin{tabular}{lp{11.5cm}}
@@ -109,7 +136,7 @@ Thesis: \emph{An information theoretic analysis of perceptual learning data from
 %Y3:&~Differential Geometry, Dynamical Systems, Continuum Mechanics, Foundations of Physics 3, Theoretical Physics\\
 %Y4:&~Elliptic Functions, Mathematical Finance, Partial Differential Equations, Solitons, Project (Mathematics; Topic: \emph{Artifical Neural Networks})\\
 %\end{tabular}
-Thesis: \emph{On Artifical Neural Networks},  Supervisor: Dr Ian Jermyn.
+Thesis: \emph{On Artifical Neural Networks},  Supervisor: Dr. Ian Jermyn.
 }
 %
 %\cventry{2005--2007}{A-Levels}{Sandbach School}{Cheshire, UK}{}{Mathematics, Further Mathematics, Physics, Chemistry (all grade A).}
@@ -132,45 +159,63 @@ Thesis: \emph{On Artifical Neural Networks},  Supervisor: Dr Ian Jermyn.
 \section{Experience}
 
 \cventry{2020 -- 2022}{Postdoctoral Research Fellow (Full time)}{Faculty of Computer Science, Dalhousie University}{Halifax, Canada}{}{
-Deployment of deep learning methods to imagery collected for benthic habitat mapping.
-Advisor: Prof. Thomas Trappenberg
+\begin{itemize}
+  \item Steered research objectives for deployment of deep learning methods on hierarchically-annotated seafloor imagery [\href{https://doi.org/10.1109/CCECE49351.2022.9918377}{Paper}].
+  \item Curated and released \href{https://doi.org/10.20383/103.0614}{BenthicNet}, a dataset of 11M seafloor habitat images from 24k sites around the world [\href{https://arxiv.org/abs/2405.05241}{Paper}].
+\end{itemize}
+Advisor: Prof. \ThomasTrappenberg{}
 }
 
 \cventry{2019 -- 2020}{Postdoctoral Research Fellow (Full time)}{Faculty of Computer Science, Dalhousie University}{Halifax}{Canada. Joint affiliation: Dept. of Electrical and Computer Engineering}{
-Applying deep learning to CPAP data, and echograms collected at tidal energy sites in the Bay of Fundy.
-Advisors: Dr. Sageev Oore, Prof.~Kamal El-Sankary
+\begin{itemize}
+  \item Applied deep learning to CPAP data in partnership with \href{https://novaresp.ai/}{NovaResp}, preemptively predicting sleep apneas, subsequently reducing apneas and hypopneas by 32\% [\href{https://doi.org/10.1109/TBME.2023.3263379}{Paper}, \href{https://doi.org/10.1183/13993003.congress-2023.PA573}{Paper}].
+  \item Collaborated with \href{https://fundyforce.ca/}{FORCE}, \href{https://deepsense.ca/}{DeepSense}, and \href{https://oera.ca/}{OERA} to segment echograms of tidal energy sites using deep learning, decreasing errors by 60\% and halving manual labour [\href{https://doi.org/10.3389/fmars.2022.867857}{Paper}].
+  \item Initiated research agendas focused on applying ML to healthcare and environmental monitoring, demonstrating leadership in interdisciplinary projects.
+\end{itemize}
+Advisors: Prof. \SageevOore{}, Prof.~Kamal El-Sankary
 }
 
+
 \cventry{2018 -- 2019}{Postdoctoral Research Fellow (Full time)}{Faculty of Computer Science, Dalhousie University}{Halifax}{Canada. Joint affiliation: Vector Institute}{
-Research in novel deep learning methods.
-Advisors: Dr. Sageev Oore, Prof. Thomas Trappenberg
+\begin{itemize}
+  \item Research in novel deep learning methods by deploying logical operations in logit space, inspired by neuroscience [\href{https://papers.nips.cc/paper_files/paper/2022/hash/c05144b635df16ac9bbf8246bbbd55ca-Abstract-Conference.html}{Paper}, \href{https://arxiv.org/abs/2111.01742}{Paper}].
+  \item Controllable symbolic music generation [\href{https://arxiv.org/abs/1907.04352}{Paper}].
+\end{itemize}
+Advisors: Prof. \SageevOore{}, Prof. \ThomasTrappenberg{}.
 }
 
 %\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.}
 
 % March 2018 to June 2018
-\cventry{2018}{Postdoctoral Research Fellow (Full time)}{School of Psychology \& School of Mathematics, University of Nottingham}{Nottingham}{UK}{
-	Program synthesis for visual reasoning tasks.
-	Advisor: Prof. Mark van Rossum
+\cventry{2018 -- 2018}{Postdoctoral Research Fellow (Full time)}{School of Psychology \& School of Mathematics, University of Nottingham}{Nottingham}{UK}{
+	Program synthesis for visual reasoning tasks [\href{https://arxiv.org/abs/1911.07721}{Paper}].
+	Advisor: Prof. \MarkvanRossum{}.
 }
 
 % March 2017 to August 2017
-\cventry{2017}{Co-founder and CSO (Full time)}{Cortirio}{London}{UK}{Co-founder and Chief Scientific Officer at \href{https://cortirio.com/}{Cortirio}, developing a portable brain scanner for diagnosing traumatic brain injury.
+\cventry{2017 -- 2017}{Co-founder and CSO (Full time)}{Cortirio}{London}{UK}{
+  Co-founder and Chief Scientific Officer at \href{https://cortirio.com/}{Cortirio}, developing a portable brain scanner for diagnosing traumatic brain injury.
+  Backed by \href{https://www.joinef.com/}{Entrepreneur First}.
 }
 
 % March 2017 to August 2017
-\cventry{2017}{Entrepreneurial Fellow (Full time)}{Entrepreneur First}{London}{UK}{
-Exploration of new startup ideas.
-}
+% \cventry{2017}{Entrepreneurial Fellow (Full time)}{Entrepreneur First}{London}{UK}{
+% Exploration of new startup ideas.
+% }
 
 % May 2015 to December 2015
-\cventry{2015}{Technical Research Assistant (Full time)}{Rochefort Lab, Centre for Integrative Physiology, University of Edinburgh}{Edinburgh}{UK}{Development of tools for analysis of calcium imaging data from mouse primary visual cortex.
+\cventry{2015 -- 2015}{Technical Research Assistant (Full time)}{Rochefort Lab, Centre for Integrative Physiology, University of Edinburgh}{Edinburgh}{UK}{
+\begin{itemize}
+  \item Developed \href{https://github.com/rochefort-lab/fissa}{FISSA}, an open source toolbox for source-separation of neuroscientific calcium imaging data [\href{https://doi.org/10.1038/s41598-018-21640-2}{Paper}].
+  \item Developed internal tooling for data analysis, deployed by multiple labs at UoE [\href{https://doi.org/10.7554/eLife.14985}{Paper}].
+\end{itemize}
+Advisor: Prof. \NathalieRochefort{}.
 %\url{https://github.com/rochefort-lab}.
 }
 
 % July 2010 to September 2010
-\cventry{2010}{Web Technician (Full time)}{FleXtel Ltd}{Sandbach}{UK}{Programming in PHP for telecoms company. Designed and coded new website selling isolated consumer product. Developed market-leading algorithms to price telephone numbers based on memorability of both numeric patterns and alphadial patterns \href{http://www.flextel.com/numbers/}{http://www.flextel.com/numbers/}.
-}
+% \cventry{2010}{Web Technician (Full time)}{FleXtel Ltd}{Sandbach}{UK}{Programming in PHP for telecoms company. Designed and coded new website selling isolated consumer product. Developed market-leading algorithms to price telephone numbers based on memorability of both numeric patterns and alphadial patterns \href{http://www.flextel.com/numbers/}{http://www.flextel.com/numbers/}.
+% }
 %
 %\cventry{Sep, 2009}{Physics Studentship}{University of Durham}{Durham}{}{Programming in MATLAB to simulate Rydberg atoms and their interactions.}
 
@@ -706,14 +751,14 @@ Hamed Hanafialamdari, \textbf{Scott Lowe}, Stephen Driscoll, Luke Hacquebard, Da
 
 \section{Supervision experience}
 
-\cventry{2023--now}{Finlay Miller}{Master of Computer Science}{Dalhousie University}{Topic: Interactive MIDI generation}{Co-supervised by Prof.~Sageev Oore}
-\cventry{2023--2024}{Pablo Millán Arias}{Ph.D. in Computer Science}{University of Waterloo}{\href{https://uwspace.uwaterloo.ca/bitstream/handle/10012/20581/MillanArias_Pablo.pdf?sequence=5}{Thesis}: ``Deep Unsupervised Learning for Biodiversity Analyses''}{Co-supervised by Prof.~Lila Kari}
-\cventry{2021--2022}{Amit Baroi}{Master of Resource \& Environmental Management}{Dalhousie University}{Topic: Building a global benthic habitat imagery dataset}{Co-supervised by Prof.~Thomas Trappenberg}
-\cventry{2020--2022}{Isaac Xu}{Master of Computer Science}{Dalhousie University}{Topic: Addressing the impact of imbalanced data in self-supervised learning}{Co-supervised by Prof.~Thomas Trappenberg}
-\cventry{2020--2022}{Shakhboz Abdulazizov}{Master of Computer Science}{Dalhousie University}{Topic: Learning multi-modal representations of benthic habitat data}{Co-supervised by Prof.~Thomas Trappenberg}
-\cventry{2019--2020}{Robert Earle}{Honours Computer Science \& Statistics}{Dalhousie University}{Thesis: ``Behaviour Of Higher Order Activation Functions''}{Co-supervised by Dr.~Sageev Oore}
-\cventry{2018--2019}{Nicholas Barreyre}{Combined Honours Bachelor of Science}{Dalhousie University}{Thesis: ``Conditional Sequence Generation: Controlling Neural Language Models For Music And Text''}{Co-supervised by Dr.~Sageev Oore}
-\cventry{2018--2019}{Nicholas Meade}{Honours Bachelor of Computer Science}{Dalhousie University}{Thesis: ``Conditional Sequence Generation: Controlling Neural Language Models For Music And Text''}{Co-supervised by Dr.~Sageev Oore}
+\cventry{since 2023}{Finlay Miller}{Master of Computer Science}{Dalhousie University}{Topic: Interactive MIDI generation.}{Co-supervised by Prof.~\SageevOore{}}
+\cventry{2023 -- 2024}{Pablo Millán Arias}{Ph.D. in Computer Science}{University of Waterloo}{\href{https://uwspace.uwaterloo.ca/bitstream/handle/10012/20581/MillanArias_Pablo.pdf?sequence=5}{Thesis}: ``Deep Unsupervised Learning for Biodiversity Analyses''.}{Co-supervised by Prof.~\LilaKari{}}
+\cventry{2021 -- 2022}{Amit Baroi}{Master of Resource \& Environmental Management}{Dalhousie University}{and DeepSense Data Science Intern, Topic: Building a global benthic habitat imagery dataset.}{Co-supervised by Prof.~\ThomasTrappenberg{}}
+\cventry{2020 -- 2022}{Isaac Xu}{Master of Computer Science}{Dalhousie University}{Topic: Addressing the impact of imbalanced data in self-supervised learning.}{Co-supervised by Prof.~\ThomasTrappenberg{}}
+\cventry{2020 -- 2022}{Shakhboz Abdulazizov}{Master of Computer Science}{Dalhousie University}{Topic: Learning multi-modal representations of benthic habitat data.}{Co-supervised by Prof.~\ThomasTrappenberg{}}
+\cventry{2019 -- 2020}{Robert Earle}{Honours Computer Science \& Statistics}{Dalhousie University}{Thesis: ``Behaviour Of Higher Order Activation Functions''.}{Co-supervised by Prof.~\SageevOore{}}
+\cventry{2018 -- 2019}{Nicholas Barreyre}{Combined Honours Bachelor of Science}{Dalhousie University}{Thesis: ``Conditional Sequence Generation: Controlling Neural Language Models For Music And Text''.}{Co-supervised by Prof.~\SageevOore{}}
+\cventry{2018 -- 2019}{Nicholas Meade}{Honours Bachelor of Computer Science}{Dalhousie University}{Thesis: ``Conditional Sequence Generation: Controlling Neural Language Models For Music And Text''.}{Co-supervised by Prof.~\SageevOore{}}
 
 
 \section{Conference and Seminar Participation}
