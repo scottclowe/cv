@@ -65,9 +65,13 @@
 %\newcommand\href[3][MidnightBlue]{\href{#2}{\color{#1}#3}}
 %\newcommand\href[2]{\href{#1}{\textcolor[HTML]{006794}{#2}}}
 %
-\newcommand\arxiv[1]{arXiv:\href{https://arxiv.org/abs/#1}{#1}}
-\newcommand\biorxiv[1]{bioRxiv:\href{https://doi.org/10.1101/#1}{#1}}
-\newcommand\pubmed[1]{PubMed:\href{https://pubmed.ncbi.nlm.nih.gov/#1}{#1}}
+%% Configure DOIs to be in smallcaps with a thin space, instead of lowercase without a space
+%\renewcommand{\doitext}{{\scshape doi:\,}}
+\renewcommand{\doitext}{{doi:\,}}
+%
+\newcommand\arxiv[1]{arXiv:\,\href{https://arxiv.org/abs/#1}{#1}}
+\newcommand\biorxiv[1]{bioRxiv:\,\href{https://doi.org/10.1101/#1}{#1}}
+\newcommand\pubmed[1]{PubMed:\,\href{https://pubmed.ncbi.nlm.nih.gov/#1}{#1}}
 %
 \def\AngelChang{\href{https://www.sfu.ca/fas/computing/people/faculty/faculty-members/angel-chang.html}{Angel Chang}}
 \def\LilaKari{\href{https://cs.uwaterloo.ca/~lila/}{Lila Kari}}
@@ -79,6 +83,13 @@
 \def\AlexThiele{\href{https://www.ncl.ac.uk/psychology/people/profile/alexthiele.html}{Alex Thiele}}
 \def\ThomasTrappenberg{\href{https://www.dal.ca/faculty/computerscience/faculty-staff/thomas-trappenberg.html}{Thomas Trappenberg}}
 %
+% Keep section headings with their content: never leave a heading at the bottom of a page
+\usepackage{needspace}
+\let\origsection\section
+\renewcommand{\section}[1]{\Needspace{8\baselineskip}\origsection{#1}\nopagebreak}
+\let\origsubsection\subsection
+\renewcommand{\subsection}[1]{\Needspace{8\baselineskip}\origsubsection{#1}\nopagebreak}
+
 \begin{document}
 %
 \hypersetup{
@@ -96,21 +107,25 @@
 \section{Summary}
 
 \cvitem{}{%
-Highly accomplished research scientist with a Ph.D. in Neuroinformatics and over a decade of experience in interdisciplinary research bridging cognitive sciences, deep learning, and artificial intelligence. Proven track record in developing advanced ML models, leading innovative projects, supervising students, and publishing impactful research in multidisciplinary collaborations.
-Experienced in deep learning, real-time forecasting, and large-scale data processing.
+% Highly accomplished research scientist with a Ph.D. in Neuroinformatics and over a decade of experience in interdisciplinary research bridging cognitive sciences, deep learning, and artificial intelligence. Proven track record in developing advanced ML models, leading innovative projects, supervising students, and publishing impactful research in multidisciplinary collaborations.
+% Experienced in deep learning, real-time forecasting, and large-scale data processing.
+Machine learning researcher developing self-supervised world models (joint-embedding predictive architectures) for agents that perceive, predict, and act in an open world, with deployments in biodiversity, ocean monitoring, and health.
+Ph.D. in Neuroinformatics, University of Edinburgh.
+Co-supervisor of 16 student research projects and one research associate; Area Chair for ICLR 2027.
 }{}{}{}{}{}
 
 
 \section{Current position}
 % Your current or previous employment position
 
-\cventry{since 2022}{Distinguished Postdoctoral Research Fellow}{Vector Institute}{Toronto, Canada}{}{
+\cventry{since 2022}{Distinguished Postdoctoral Research Fellow}{Vector Institute}{Toronto, Canada}{ (competitive fellowship)}{
 \begin{itemize}
-  \item Developing novel methodologies for self-supervised representation learning [\href{https://arxiv.org/abs/2603.15553}{Paper}, \href{https://openreview.net/forum?id=pa3zBGDMAd}{Paper}, \href{https://arxiv.org/abs/2609.38278}{Paper}].
-  \item Developing multimodal ML models (vision, DNA, and text) to facilitate monitoring of global insect biodiversity, even on previously unseen species [\href{https://arxiv.org/abs/2406.02465}{Paper}, \href{https://arxiv.org/abs/2405.17537}{Paper}, \href{https://arxiv.org/abs/2311.02401}{Paper}, \href{https://arxiv.org/abs/2502.18405}{Paper}, \href{https://openreview.net/forum?id=wOgcLKq1Hg}{Paper}].
-  \item Curated and released \href{https://biodiversitygenomics.net/projects/5m-insects/}{BIOSCAN-5M}, a dataset of 5M samples of insects with paired image and DNA barcode data [\href{https://arxiv.org/abs/2406.12723}{Paper}].
-  \item Investigating and developing System 2 reasoning capabilities in agentic large language models [\href{https://arxiv.org/abs/2410.03662}{Paper}, \href{https://arxiv.org/abs/2610.12596}{Paper}].
-  \item Developing real-time, interactive symbolic music generation models [\href{https://openreview.net/forum?id=nXHczMetxK}{Paper}].
+  \item Developing self-supervised world models via hidden-layer self-distillation, a joint-embedding predictive architecture [\href{https://openreview.net/forum?id=iLR53jV2Bg}{NeurIPS 2026}; \href{https://openreview.net/forum?id=pa3zBGDMAd}{ICLR 2026 Workshop}; \href{https://openreview.net/forum?id=YkMrN90inE}{ICLR 2026 Workshop}].
+  \item Self-supervised representation learning across modalities, including DNA foundation models for biodiversity [\href{https://openreview.net/forum?id=gdwg7ntmT5}{TMLR 2026}; \href{https://doi.org/10.1093/bioadv/vbag054}{Bioinf.\ Adv.\ 2026}; \href{https://openreview.net/forum?id=wOgcLKq1Hg}{NeurIPS 2025 Workshop}; \href{https://arxiv.org/abs/2502.18405}{ICLR 2025 Workshop}; \href{https://arxiv.org/abs/2609.38278}{arXiv 2026 (Under review)}; \href{https://arxiv.org/abs/2611.05418}{arXiv 2026 (Under review)}].
+  \item Developing multimodal ML models (vision, DNA, and text) for monitoring global insect biodiversity, including previously unseen species [\href{https://openreview.net/forum?id=d5HUnyByAI}{ICLR 2025}; \href{https://arxiv.org/abs/2508.16744}{ICCV 2025 Workshop}; \href{https://openreview.net/forum?id=KcjIkxm3u5}{NeurIPS 2026 Workshop}; \href{https://arxiv.org/abs/2609.35877}{arXiv/Under review}].
+  \item Curated and released \href{https://biodiversitygenomics.net/projects/5m-insects/}{BIOSCAN-5M}, a dataset of 5M samples of insects with paired image and DNA barcode data [\href{https://openreview.net/forum?id=A33u66KmYf}{NeurIPS 2024}].
+  \item Investigating and developing System 2 reasoning capabilities in agentic large language models [\href{https://arxiv.org/abs/2410.03662}{NeurIPS 2024 Workshop}; \href{https://arxiv.org/abs/2610.12596}{arXiv 2026 (Under review)}].
+  \item Real-time, interactive symbolic music generation [ISMIR 2026, \href{https://openreview.net/forum?id=nXHczMetxK}{NeurIPS 2025 Workshop}].
 %  \item Second-order optimization [\href{https://arxiv.org/abs/2509.03378}{Paper}].
 \end{itemize}
 Responsibilities: Lead research projects, lead supervision of students, co-supervise students, develop tooling for running experiments used by the rest of the lab.\\
@@ -118,70 +133,20 @@ Advisors: Prof. \GrahamTaylor{} and Prof. \SageevOore{}.
 }
 
 
-\section{Education}
-% arguments 3 to 6 can be left empty
-%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
-
-\cventry{2012 -- 2017}{Doctor of Philosophy (Ph.D. in Neuroinformatics)}{Institute for Adaptive and Neural Computation, School of Informatics, University of Edinburgh}{Edinburgh, UK}{}{\href{http://scottclowe.com/LoweSC_PhD_thesis.pdf}{Thesis}: Decoding information from neural populations in the visual cortex.
-%\href{http://scottclowe.com/LoweSC_PhD_thesis.pdf}{[Thesis PDF]}.
-%\href{http://scottclowe.com/LoweSC_PhD_abstract.pdf}{[Abstract]},
-%\href{http://scottclowe.com/LoweSC_PhD_laysummary.pdf}{[Lay Summary]}.
-Supervisors: Profs. \MarkvanRossum{}, \StefanoPanzeri{}, and \AlexThiele{}.
-}
-
-\cventry{2011 -- 2012}{MSc with Distinction, in Neuroinformatics by Research}{University of Edinburgh}{Edinburgh, UK}{\textit{average 75.3\%
- --- for comparison, a Distinction at $\ge70\%$ is approximately equivalent to $\ge3.75/4$ US GPA%
-}}{%
-%\begin{tabular}{lp{11.5cm}}
-% & Neural Computation, Principles of Neuroscience, Probabilistic Modelling and Reasoning, Neural Information Processing, Computational Neuroscience of Vision, Neuroinformatics Research, Research Thesis (Neuroinformatics; Topic: \emph{An information theoretic analysis of perceptual learning data from macaque V1 and V4})\\
-%\end{tabular}
-Thesis: \emph{An information theoretic analysis of perceptual learning data from macaque V1 and V4}.
-Supervisors: Prof. \AlexThiele{} and Prof. \StefanoPanzeri{}.
-}
-
-\cventry{2007 -- 2011}{MSci with First Class Honours, in Natural Sciences (Mathematics and Physics)}{Durham University}{Durham, UK}{\textit{average 73.4\%
- --- for comparison, a First Class at $\ge70\%$ is approximately equivalent to $\ge3.75/4$ US GPA%
-}}{%
-%\begin{tabular}{lp{11.5cm}}
-%Y1:&~Core Maths A, Core Maths B1, Foundations of Physics 1, Discovery Skills in Physics\\
-%Y2:&~Complex Analysis, Linear Algebra, Analysis in Many Variables, Foundations of Physics 2, Thermal and Condensed Matter Physics\\
-%Y3:&~Differential Geometry, Dynamical Systems, Continuum Mechanics, Foundations of Physics 3, Theoretical Physics\\
-%Y4:&~Elliptic Functions, Mathematical Finance, Partial Differential Equations, Solitons, Project (Mathematics; Topic: \emph{Artifical Neural Networks})\\
-%\end{tabular}
-Thesis: \emph{On Artifical Neural Networks},  Supervisor: Dr. Ian Jermyn.
-}
-%
-%\cventry{2005--2007}{A-Levels}{Sandbach School}{Cheshire, UK}{}{Mathematics, Further Mathematics, Physics, Chemistry (all grade A).}
-
-
-%\section{Master thesis}
-%\cvitem{title}{\emph{An information theoretic analysis of perceptual learning data from macaque V1 and V4}, Master of Science by Research thesis, University of Edinburgh.}
-%\cvitem{year}{2012}
-%\cvitem{supervisors}{Alex Thiele and Stefano Panzeri}
-%%\cvitem{description}{Short thesis abstract}
-%
-%
-%\section{Master thesis}
-%\cvitem{title}{\emph{On Artifical Neural Networks}, Master of Natural Sciences (Mathematics) dissertation, Durham University}
-%\cvitem{year}{2011}
-%\cvitem{supervisors}{Ian Jermyn}
-%%\cvitem{description}{Short thesis abstract}
-
-\clearpage
-\section{Experience}
+\section{Previous positions}
 
 \cventry{2020 -- 2022}{Postdoctoral Research Fellow (Full time)}{Faculty of Computer Science, Dalhousie University}{Halifax, Canada}{}{
 \begin{itemize}
-  \item Steered research objectives for deployment of deep learning methods on hierarchically-annotated seafloor imagery [\href{https://doi.org/10.1109/CCECE49351.2022.9918377}{Paper}, \href{https://doi.org/10.1109/IJCNN60899.2024.10650176}{Paper}].
-  \item Curated and released \href{https://doi.org/10.20383/103.0614}{BenthicNet}, a dataset of 11M seafloor habitat images from 24k sites around the world [\href{https://doi.org/10.1038/s41597-025-04491-1}{Paper}].
+  \item Steered research objectives for deployment of deep learning methods on hierarchically-annotated seafloor imagery [\href{https://doi.org/10.1109/IJCNN60899.2024.10650176}{IJCNN 2024}; \href{https://doi.org/10.1109/CCECE49351.2022.9918377}{CCECE 2022}].
+  \item Curated and released \href{https://doi.org/10.20383/103.0614}{BenthicNet}, a dataset of 11M seafloor habitat images from 24k sites around the world [\href{https://doi.org/10.1038/s41597-025-04491-1}{Sci.\ Data 2025}].
 \end{itemize}
 Advisor: Prof. \ThomasTrappenberg{}
 }
 
 \cventry{2019 -- 2020}{Postdoctoral Research Fellow (Full time)}{Faculty of Computer Science, Dalhousie University}{Halifax}{Canada. Joint affiliation: Dept. of Electrical and Computer Engineering}{
 \begin{itemize}
-  \item Applied deep learning to CPAP data in partnership with \href{https://novaresp.ai/}{NovaResp}, preemptively predicting sleep apneas, subsequently reducing apneas and hypopneas by 32\% [\href{https://doi.org/10.1109/TBME.2023.3263379}{Paper}, \href{https://doi.org/10.1183/13993003.congress-2023.PA573}{Paper}].
-  \item Collaborated with \href{https://fundyforce.ca/}{FORCE}, \href{https://deepsense.ca/}{DeepSense}, and \href{https://oera.ca/}{OERA} to segment echograms of tidal energy sites using deep learning, decreasing errors by 60\% and halving manual labour [\href{https://doi.org/10.3389/fmars.2022.867857}{Paper}].
+  \item Applied deep learning to CPAP data in partnership with \href{https://novaresp.ai/}{NovaResp}, preemptively predicting sleep apneas, reducing apneas and hypopneas by 32\% [\href{https://doi.org/10.1109/TBME.2023.3263379}{IEEE TBME 2023}; \href{https://doi.org/10.1183/13993003.congress-2023.PA573}{ERJ 2023}].
+  \item Collaborated with \href{https://fundyforce.ca/}{FORCE}, \href{https://deepsense.ca/}{DeepSense}, and \href{https://oera.ca/}{OERA} to segment echograms of tidal energy sites using deep learning, cutting errors by 60\% and halving manual labour [\href{https://doi.org/10.3389/fmars.2022.867857}{Front.\ Mar.\ Sci.\ 2022}].
   \item Initiated research agendas focused on applying ML to healthcare and environmental monitoring, demonstrating leadership in interdisciplinary projects.
 \end{itemize}
 Advisors: Prof. \SageevOore{}, Prof.~Kamal El-Sankary
@@ -190,8 +155,8 @@ Advisors: Prof. \SageevOore{}, Prof.~Kamal El-Sankary
 
 \cventry{2018 -- 2019}{Postdoctoral Research Fellow (Full time)}{Faculty of Computer Science, Dalhousie University}{Halifax}{Canada. Joint affiliation: Vector Institute}{
 \begin{itemize}
-  \item Research in novel deep learning methods by deploying logical operations in logit space, inspired by neuroscience [\href{https://papers.nips.cc/paper_files/paper/2022/hash/c05144b635df16ac9bbf8246bbbd55ca-Abstract-Conference.html}{Paper}, \href{https://arxiv.org/abs/2111.01742}{Paper}].
-  \item Controllable symbolic music generation [\href{https://arxiv.org/abs/1907.04352}{Paper}].
+  \item Research in novel deep learning methods by deploying logical operations in logit space, inspired by neuroscience [\href{https://papers.nips.cc/paper_files/paper/2022/hash/c05144b635df16ac9bbf8246bbbd55ca-Abstract-Conference.html}{NeurIPS 2022}; \href{https://arxiv.org/abs/2111.01742}{arXiv 2021}].
+  \item Controllable symbolic music generation [\href{https://arxiv.org/abs/1907.04352}{ICCC 2019}].
 \end{itemize}
 Advisors: Prof. \SageevOore{}, Prof. \ThomasTrappenberg{}.
 }
@@ -200,7 +165,7 @@ Advisors: Prof. \SageevOore{}, Prof. \ThomasTrappenberg{}.
 
 % March 2018 to June 2018
 \cventry{2018 -- 2018}{Postdoctoral Research Fellow (Full time)}{School of Psychology \& School of Mathematics, University of Nottingham}{Nottingham}{UK}{
-	Program synthesis for visual reasoning tasks [\href{https://arxiv.org/abs/1911.07721}{Paper}].
+	Program synthesis for visual reasoning tasks [\href{https://arxiv.org/abs/1911.07721}{arXiv 2019}].
 	Advisor: Prof. \MarkvanRossum{}.
 }
 
@@ -218,8 +183,8 @@ Advisors: Prof. \SageevOore{}, Prof. \ThomasTrappenberg{}.
 % May 2015 to December 2015
 \cventry{2015 -- 2015}{Technical Research Assistant (Full time)}{Rochefort Lab, Centre for Integrative Physiology, University of Edinburgh}{Edinburgh}{UK}{
 \begin{itemize}
-  \item Developed \href{https://github.com/rochefort-lab/fissa}{FISSA}, an open source toolbox for source-separation of neuroscientific calcium imaging data [\href{https://doi.org/10.1038/s41598-018-21640-2}{Paper}].
-  \item Developed internal tooling for data analysis, deployed by multiple labs at UoE [\href{https://doi.org/10.7554/eLife.14985}{Paper}].
+  \item Developed \href{https://github.com/rochefort-lab/fissa}{FISSA}, an open source toolbox for source-separation of neuroscientific calcium imaging data [\href{https://doi.org/10.1038/s41598-018-21640-2}{Sci.\ Rep.\ 2018}].
+  \item Developed internal tooling for data analysis, used by multiple labs at UoE [\href{https://doi.org/10.7554/eLife.14985}{eLife 2016}].
 \end{itemize}
 Advisor: Prof. \NathalieRochefort{}.
 %\url{https://github.com/rochefort-lab}.
@@ -254,7 +219,97 @@ Advisor: Prof. \NathalieRochefort{}.
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS AND TALKS SECTION
 %----------------------------------------------------------------------------------------
-\clearpage
+%\clearpage
+
+\section{Education}
+% arguments 3 to 6 can be left empty
+%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+
+\cventry{2012 -- 2017}{Doctor of Philosophy (Ph.D. in Neuroinformatics)}{Institute for Adaptive and Neural Computation, School of Informatics, University of Edinburgh}{Edinburgh, UK}{}{\href{http://scottclowe.com/LoweSC_PhD_thesis.pdf}{Thesis}: Decoding information from neural populations in the visual cortex.
+%\href{http://scottclowe.com/LoweSC_PhD_thesis.pdf}{[Thesis PDF]}.
+%\href{http://scottclowe.com/LoweSC_PhD_abstract.pdf}{[Abstract]},
+%\href{http://scottclowe.com/LoweSC_PhD_laysummary.pdf}{[Lay Summary]}.
+Supervisors: Profs. \MarkvanRossum{}, \StefanoPanzeri{}, and \AlexThiele{}.
+}
+
+\cventry{2011 -- 2012}{MSc with Distinction, in Neuroinformatics by Research}{University of Edinburgh}{Edinburgh, UK}{\textit{average 75.3\%%
+% --- for comparison, a Distinction at $\ge70\%$ is approximately equivalent to $\ge3.75/4$ US GPA%
+}}{%
+%\begin{tabular}{lp{11.5cm}}
+% & Neural Computation, Principles of Neuroscience, Probabilistic Modelling and Reasoning, Neural Information Processing, Computational Neuroscience of Vision, Neuroinformatics Research, Research Thesis (Neuroinformatics; Topic: \emph{An information theoretic analysis of perceptual learning data from macaque V1 and V4})\\
+%\end{tabular}
+Thesis: \emph{An information theoretic analysis of perceptual learning data from macaque V1 and V4}.
+Supervisors: Prof. \AlexThiele{} and Prof. \StefanoPanzeri{}.
+}
+
+\cventry{2007 -- 2011}{MSci with First Class Honours, in Natural Sciences (Mathematics and Physics)}{Durham University}{Durham, UK}{\textit{average 73.4\%%
+% --- for comparison, a First Class at $\ge70\%$ is approximately equivalent to $\ge3.75/4$ US GPA%
+}}{%
+%\begin{tabular}{lp{11.5cm}}
+%Y1:&~Core Maths A, Core Maths B1, Foundations of Physics 1, Discovery Skills in Physics\\
+%Y2:&~Complex Analysis, Linear Algebra, Analysis in Many Variables, Foundations of Physics 2, Thermal and Condensed Matter Physics\\
+%Y3:&~Differential Geometry, Dynamical Systems, Continuum Mechanics, Foundations of Physics 3, Theoretical Physics\\
+%Y4:&~Elliptic Functions, Mathematical Finance, Partial Differential Equations, Solitons, Project (Mathematics; Topic: \emph{Artifical Neural Networks})\\
+%\end{tabular}
+Thesis: \emph{On Artificial Neural Networks},  Supervisor: Dr. Ian Jermyn.
+}
+%
+%\cventry{2005--2007}{A-Levels}{Sandbach School}{Cheshire, UK}{}{Mathematics, Further Mathematics, Physics, Chemistry (all grade A).}
+
+
+%\section{Master thesis}
+%\cvitem{title}{\emph{An information theoretic analysis of perceptual learning data from macaque V1 and V4}, Master of Science by Research thesis, University of Edinburgh.}
+%\cvitem{year}{2012}
+%\cvitem{supervisors}{Alex Thiele and Stefano Panzeri}
+%%\cvitem{description}{Short thesis abstract}
+%
+%
+%\section{Master thesis}
+%\cvitem{title}{\emph{On Artifical Neural Networks}, Master of Natural Sciences (Mathematics) dissertation, Durham University}
+%\cvitem{year}{2011}
+%\cvitem{supervisors}{Ian Jermyn}
+%%\cvitem{description}{Short thesis abstract}
+
+%\clearpage
+\section{Research funding}
+
+\cvitem{}{\textit{N.B. Canadian funding agencies do not permit postdoctoral fellows to be named as principal or co-principal investigators; roles are given below.}}
+
+\cvitem{2026}{
+%\emoji{dollar-banknote}
+Vector Institute Tidewater compute and funding competition (project lead). Project: ``Masked Self-Distillation of Hidden Layers for Multimodal Representation Learning''. 15,000 GPU-hours and CAD 20,000 trainee funding.
+}
+
+\cvitem{2026}{
+%\emoji{desktop-computer}
+Lambda Research Grant (principal applicant). \textit{Total value: USD\,2,000.}
+}
+
+\cvitem{2022}{
+%\emoji{dollar-banknote}
+Mitacs Accelerate grant IT27877 (named postdoctoral recipient; reviewed application): Artificial intelligence driven monitoring and prediction of true sleep health on CPAP machines to improve patient care and reduce the harm of obstructive sleep apnea. \textit{Total value: CAD\,180,000.}
+}
+
+\cvitem{2021}{
+%\emoji{dollar-banknote}
+Compute Canada Resources for Research Groups (RRG) competition, 2021 (lead author; submitted by PI Prof.~\ThomasTrappenberg{}). Project: ``Global Benthic Habitats''. \textit{Value: CAD\,20,059.}
+}
+
+\cvitem{2020}{
+%\emoji{dollar-banknote}
+Mitacs Accelerate grant IT19053 (named postdoctoral recipient; reviewed application): Monitoring and Analysis of COVID-19 Acute Respiratory Distress Syndrome on Ventilators. \textit{Total value: CAD\,210,000}.
+}
+
+\cvitem{2019}{
+%\emoji{dollar-banknote}
+Mitacs Accelerate grant IT16140 (named postdoctoral recipient; reviewed application): Active Learning for Fish School Recognition in Echograms in the Bay of Fundy. \textit{Value: CAD\,15,000.}
+}
+
+\cvitem{2018}{
+%\emoji{desktop-computer}
+NVIDIA GPU Grant (principal applicant). Titan~V GPU.
+}
+
 
 \section{Publications}
 
@@ -263,43 +318,82 @@ Advisor: Prof. \NathalieRochefort{}.
 % %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
 % \nocite{*}
 % \bibliographystyle{plain}
-% \bibliography{publications}    
+% \bibliography{publications}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\cvitem{}{\textit{\href{https://scholar.google.com/citations?user=ZFPhxuAAAAAJ}{Google Scholar} (October 2026): 1,035 citations (802 since 2021); h-index 14; i10-index 15.}}
+
+\cvitem{}{\textit{25 peer-reviewed papers (7 at NeurIPS, ICLR, and TMLR; 13 journal articles, incl.\ \emph{Sci.\ Data}~\texttimes3, \emph{PLoS Biol.}, \emph{Curr.\ Biol.}, \emph{eLife}) and 10 workshop papers.}}
+
+\cvitem{}{
+*Joint first author.
+$^\dagger$Joint last author.
+$^\S$A student I co-supervised.
+}
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Selected papers}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-\cvitem{Dec, 2026}{% arXiv: Mar 2026
-  \textbf{Scott C. Lowe}, Anthony Fuller, Sageev Oore, Evan Shelhamer, Graham W. Taylor.
-  ``Self-Distillation of Hidden Layers for Self-Supervised Representation Learning''.
-  \arxiv{2603.15553}. To appear at \emph{The Fortieth Annual Conference on Neural Information Processing Systems} (NeurIPS 2026).
+\cvitem{Oct, 2026}{
+  \textbf{Scott~C.~Lowe}, Sander W. Keemink.
+  ``SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire''.
+  \emph{Under review.}
+  \arxiv{2610.12596}.
+}
+
+\cvitem{Sep, 2026}{% arXiv: Mar 2026; accepted Sep 2026; conference Dec 2026
+  \textbf{Scott~C.~Lowe}, Anthony Fuller, Sageev Oore, Evan Shelhamer, Graham W. Taylor.
+  ``Self-Distillation of Hidden Layers for Masked Self-Supervised Representation Learning''.
+  \arxiv{2603.15553}. To appear at \emph{The Fortieth Annual Conference on Neural Information Processing Systems} (NeurIPS 2026), Paris.
   [\href{https://openreview.net/forum?id=iLR53jV2Bg}{OpenReview}]
 }
 
 \cvitem{Aug, 2026}{
-  \textbf{Scott C. Lowe}*, Joakim Bruslund Haurum*, Sageev Oore$^\dagger$, Thomas B. Moeslund$^\dagger$, Graham W. Taylor$^\dagger$.
+  \textbf{Scott~C.~Lowe}*, Joakim Bruslund Haurum*, Sageev Oore$^\dagger$, Thomas B. Moeslund$^\dagger$, Graham W. Taylor$^\dagger$.
   ``An Empirical Study into Clustering of Unseen Datasets with Self-Supervised Encoders''.
   \textit{\href{https://openreview.net/forum?id=gdwg7ntmT5}{Transactions on Machine Learning Research}, 2026}.
   \arxiv{2406.02465}.
   [\href{https://openreview.net/forum?id=gdwg7ntmT5}{OpenReview}]
 }% \href{https://icml.cc/virtual/2024/39430 https://icml.cc/virtual/2024/workshop/29954
 
-\cvitem{Oct, 2026}{
-  \textbf{Scott C. Lowe}, Sander W. Keemink.
-  ``SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire''.
-  \arxiv{2610.12596}.
+\cvitem{Apr, 2025}{
+  ZeMing Gong$^\S$, Austin T. Wang, Xiaoliang Huo$^\S$, Joakim Bruslund Haurum, \textbf{Scott~C.~Lowe}, Graham W. Taylor, Angel X. Chang.
+  % ``BIOSCAN-CLIP: Bridging Vision and Genomics for Biodiversity Monitoring at Scale''.
+  ``CLIBD: Bridging Vision and Genomics for Biodiversity Monitoring at Scale''.
+  In \emph{Proceedings of the Thirteenth International Conference on Learning Representations (ICLR 2025)}.
+  \arxiv{2405.17537}.
+  [\href{https://openreview.net/forum?id=d5HUnyByAI}{OpenReview}].
+  An earlier version, ``\href{https://sites.google.com/view/fgvc11/papers}{BIOSCAN-CLIP}'', was selected for oral presentation at CRV 2024.
+}
+
+\cvitem{Dec, 2024}{
+  Zahra Gharaee*, \textbf{Scott~C.~Lowe}*, ZeMing Gong$^\S$*, Pablo Millan Arias$^\S$*, Nicholas Pellegrino, Austin T. Wang, Joakim Bruslund Haurum, Iuliia Zarubiieva, Lila Kari, Dirk Steinke$^\dagger$, Graham W. Taylor$^\dagger$, Paul Fieguth$^\dagger$, Angel X. Chang$^\dagger$.
+  ``BIOSCAN-5M: A Multimodal Dataset for Insect Biodiversity''.
+  In \emph{\href{https://proceedings.neurips.cc/paper_files/paper/2024/hash/3fdbb472813041c9ecef04c20c2b1e5a-Abstract-Datasets_and_Benchmarks_Track.html}{Proceedings} of the Thirty-eighth Conference on Neural Information Processing Systems (NeurIPS 2024)}.
+  \arxiv{2406.12723}.
+  [\href{https://openreview.net/forum?id=A33u66KmYf}{OpenReview}]
 }
 
 \cvitem{Oct, 2024}{
-  \textbf{Scott C. Lowe},
+  \textbf{Scott~C.~Lowe},
   ``System 2 Reasoning Capabilities Are Nigh''.
   Presented at the \textit{\href{https://neurips.cc/virtual/2024/104301}{System 2 Reasoning At Scale} Workshop, NeurIPS 2024}.
   \arxiv{2410.03662}.
   [\href{https://openreview.net/forum?id=ZxaipE6f62}{OpenReview}]
 }% https://neurips.cc/virtual/2024/workshop/84749
 
+\cvitem{Oct, 2023}{
+  Meagan Sinclair, Hamed Hanafi Alamdari, Julia Paffile, Kamal El-Sankary, \textbf{Scott~Lowe}, Stephen Driscoll, Sageev Oore, Heather Tomson, Gregory Begin, Guillermo Aristi, Michael Schmidt, David Roach, Thomas Penzel, Ingo Fietze, Sanjay R. Patel, Reena Mehra, Debra Morrison.
+  % (2023, October).
+  ``The Beginning of the AI-Enabled Preventative PAP Therapy Era: A First-in-Human Proof of Concept Interventional Study''.
+  \emph{IEEE Transactions on Biomedical Engineering}.
+  \doi{10.1109/TBME.2023.3263379}.
+}
+
 \cvitem{Dec, 2022}{
-  \textbf{Scott C. Lowe}, Robert Earle, Jason d'Eon, Thomas Trappenberg, Sageev Oore.
+  \textbf{Scott~C.~Lowe}, Robert Earle$^\S$, Jason d'Eon, Thomas Trappenberg, Sageev Oore.
   % (2022, December).
   ``Logical Activation Functions: Logit-space equivalents of Probabilistic Boolean Operators''.
   In \emph{\href{https://papers.nips.cc/paper_files/paper/2022/hash/c05144b635df16ac9bbf8246bbbd55ca-Abstract-Conference.html}{Proceedings} of the Thirty-sixth Conference on Neural Information Processing Systems (NeurIPS 2022)}.
@@ -307,74 +401,72 @@ Advisor: Prof. \NathalieRochefort{}.
   [\href{https://openreview.net/forum?id=m6HNNpQO8dc}{OpenReview}]
 }
 
-\cvitem{Apr, 2025}{
-  ZeMing Gong, Austin T. Wang, Xiaoliang Huo, Joakim Bruslund Haurum, \textbf{Scott C. Lowe}, Graham W. Taylor, Angel X. Chang.
-  % ``BIOSCAN-CLIP: Bridging Vision and Genomics for Biodiversity Monitoring at Scale''.
-  ``CLIBD: Bridging Vision and Genomics for Biodiversity Monitoring at Scale''.
-  In \emph{Proceedings of the Thirteenth International Conference on Learning Representations (ICLR 2025)}.
-  \arxiv{2405.17537}.
-  [\href{https://openreview.net/forum?id=d5HUnyByAI}{OpenReview}]
-}
-
-\cvitem{Dec, 2024}{
-  Zahra Gharaee*, \textbf{Scott C. Lowe}*, ZeMing Gong*, Pablo Millan Arias*, Nicholas Pellegrino, Austin T. Wang, Joakim Bruslund Haurum, Iuliia Zarubiieva, Lila Kari, Dirk Steinke$^\dagger$, Graham W. Taylor$^\dagger$, Paul Fieguth$^\dagger$, Angel X. Chang$^\dagger$.
-  ``BIOSCAN-5M: A Multimodal Dataset for Insect Biodiversity''.
-  In \emph{\href{https://proceedings.neurips.cc/paper_files/paper/2024/hash/3fdbb472813041c9ecef04c20c2b1e5a-Abstract-Datasets_and_Benchmarks_Track.html}{Proceedings} of the Thirty-eighth Conference on Neural Information Processing Systems (NeurIPS 2024)}.
-  \arxiv{2406.12723}.
-  [\href{https://openreview.net/forum?id=A33u66KmYf}{OpenReview}]
-}
-
-\cvitem{May, 2024}{
-  \textbf{Scott C. Lowe}*, Benjamin Misiuk*, Isaac Xu*, Shakhboz Abdulazizov, Amit R. Baroi, Alex C. Bastos, Merlin Best, Vicki Ferrini, Ariell Friedman, Deborah Hart, Ove Hoegh-Guldberg, Daniel Ierodiaconou, Julia Mackin-McLaughlin, Kathryn Markey, Pedro S. Menandro, Jacquomo Monk, Shreya Nemani, John O'Brien, Elizabeth Oh, Luba Y. Reshitnyk, Katleen Robert, Chris M. Roelfsema, Jessica A. Sameoto, Alexandre C. G. Schimel, Jordan A. Thomson, Brittany R. Wilson, Melisa C. Wong, Craig J. Brown$^\dagger$, Thomas Trappenberg$^\dagger$.
-  ``BenthicNet: A global compilation of seafloor images for deep learning applications''.
-  \emph{Scientific Data} \textbf{12}, 230 (2025).
-  \doi{10.1038/s41597-025-04491-1}.
-  \arxiv{2405.05241}.
-  \pubmed{39920123}.
-}
-
-
-\clearpage
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Additional papers}
+\subsection{Conference papers}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-\cvitem{Nov, 2026}{
-  Finlay Miller*, Sageev Oore*, Chandramouli Shama Sastry, Marvin F. da Silva, Sri Harsha Dumpala, Daniel Oore, \textbf{Scott C. Lowe}.
+\cvitem{Jul, 2026}{% accepted Jul 2026; conference Nov 2026
+  Finlay Miller$^\S$*, Sageev Oore*, Chandramouli Shama Sastry, Marvin F. da Silva, Sri Harsha Dumpala, Daniel Oore, \textbf{Scott~C.~Lowe}.
   ``SmartLooper: a Framework for Personalized Human-AI Musical Improvisation''.
   To appear at \emph{The 27th International Society for Music Information Retrieval Conference} (ISMIR 2026).
 }
 
-\cvitem{Sep, 2026}{
-  Anthony Fuller, \textbf{Scott C. Lowe}, Daniel G. Kyrollos, Graham W. Taylor$^\dagger$, Evan Shelhamer$^\dagger$, James R. Green$^\dagger$.
-  ``Masked Swingers: Harnessing Data Augmentation to Advance Autoencoders for Self-Supervised Learning''.
-  \arxiv{2609.38278}.
-}
-
-\cvitem{Sep, 2026}{
-  Monireh Safari*, Pablo Millan Arias*, \textbf{Scott C. Lowe}, Lila Kari, Angel X. Chang, Graham W. Taylor.
-  ``{BarcodeMAE+}: Rethinking Masked Pretraining and Global Representations for DNA Barcode Foundation Models''.
-  \arxiv{2609.35877}.
-}
-
-\cvitem{Sep, 2026}{
-    S. M. Rayeed*, Mridul Khurana*, Alyson East*, Isadora E. Fluck, Elizabeth G. Campolongo, Samuel Stevens, Iuliia Zarubiieva, \textbf{Scott C. Lowe}, Michael W. Denslow, Evan D. Donoso, Jiaman Wu, Michelle Ramirez, Benjamin Baiser, Charles V. Stewart, Paula Mabee, Tanya Berger-Wolf, Anuj Karpatne, Hilmar Lapp, Robert P. Guralnick, Graham W. Taylor$^\dagger$, Sydne Record$^\dagger$.
-    ``A continental-scale dataset of ground beetles with high-resolution images and validated morphological trait measurements''.
-    \emph{Scientific Data} (2026).
-    \doi{10.1038/s41597-026-08120-3}.
-    \arxiv{2601.10687}.
-}
-
 \cvitem{Apr, 2026}{
-    Wu Lin, \textbf{Scott C. Lowe}, Felix Dangel, Runa Eschenhagen, Zikun Xu, Roger B. Grosse.
+    Wu Lin, \textbf{Scott~C.~Lowe}, Felix Dangel, Runa Eschenhagen, Zikun Xu, Roger B. Grosse.
     ``Understanding and Improving Shampoo and SOAP via Kullback-Leibler Minimization''.
     In \emph{Proceedings of the Fourteenth International Conference on Learning Representations (ICLR 2026)}.
     \arxiv{2509.03378}.
     [\href{https://openreview.net/forum?id=pQQuC1nIQq}{OpenReview}]
 }% https://neurips.cc/virtual/2025/loc/san-diego/workshop/109581
 
+\cvitem{Jun, 2024}{
+  Isaac Xu$^\S$, Benjamin Misiuk, \textbf{Scott~C.~Lowe}, Martin Gillis, Craig J. Brown, Thomas Trappenberg.
+  % (2024, June).
+  ``Hierarchical Multi-Label Classification with Missing Information for Benthic Habitat Imagery,''
+  In Proceedings of the \emph{2024 International Joint Conference on Neural Networks (IJCNN 2024)}.
+  \doi{10.1109/IJCNN60899.2024.10650176}.
+  \arxiv{2409.06618}.
+}
+
+\cvitem{Dec, 2023}{
+  Zahra Gharaee*, ZeMing Gong*, Nicholas Pellegrino*, Iuliia Zarubiieva, Joakim Bruslund Haurum, \textbf{Scott~C.~Lowe}, Jaclyn T.A. McKeown, Chris C.Y. Ho, Joschka McLeod, Yi-Yun C. Wei, Jireh Agda, Sujeevan Ratnasingham, Dirk Steinke$^\dagger$, Angel X. Chang$^\dagger$, Graham W. Taylor$^\dagger$, Paul Fieguth$^\dagger$.
+  % (2023, December).
+  ``A Step Towards Worldwide Biodiversity Assessment: The BIOSCAN-1M Insect Dataset''.
+  In \emph{\href{https://proceedings.neurips.cc/paper_files/paper/2023/file/87dbbdc3a685a97ad28489a1d57c45c1-Paper-Datasets_and_Benchmarks.pdf}{Proceedings} of the Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS 2023)}.
+  \arxiv{2307.10455}.
+  [\href{https://openreview.net/forum?id=ZDnnzsado4}{OpenReview}]
+}
+
+\cvitem{Sep, 2022}{
+  Isaac Xu$^\S$, \textbf{Scott~C.~Lowe}, Thomas Trappenberg.
+  % (2022, September).
+  ``Label-Free Monitoring of Self-Supervised Learning Progress''.
+  \emph{2022 IEEE Canadian Conference on Electrical and Computer Engineering (CCECE)}, Halifax, Nova Scotia, Canada, 2022, pp 78--84.
+  \doi{10.1109/CCECE49351.2022.9918377}.
+}
+
+\cvitem{Jun, 2019}{
+  Nicholas Meade$^\S$*, Nicholas Barreyre$^\S$*, \textbf{Scott~C.~Lowe}, Sageev Oore.
+  % (2019, June).
+  ``Exploring Conditioning for Generative Music Systems with Human-Interpretable~Controls''.
+  In \emph{\href{http://computationalcreativity.net/iccc2019/assets/iccc_proceedings_2019.pdf}{Proceedings} of the 10\textsuperscript{th} International Conference on Computational Creativity (ICCC 2019)}.
+  \arxiv{1907.04352}.
+}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Journal articles}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\cvitem{Sep, 2026}{
+    S. M. Rayeed*, Mridul Khurana*, Alyson East*, Isadora E. Fluck, Elizabeth G. Campolongo, Samuel Stevens, Iuliia Zarubiieva, \textbf{Scott~C.~Lowe}, Michael W. Denslow, Evan D. Donoso, Jiaman Wu, Michelle Ramirez, Benjamin Baiser, Charles V. Stewart, Paula Mabee, Tanya Berger-Wolf, Anuj Karpatne, Hilmar Lapp, Robert P. Guralnick, Graham W. Taylor$^\dagger$, Sydne Record$^\dagger$.
+    ``A continental-scale dataset of ground beetles with high-resolution images and validated morphological trait measurements''.
+    \emph{Scientific Data} (2026).
+    \doi{10.1038/s41597-026-08120-3}.
+    \arxiv{2601.10687}.
+}
+
 \cvitem{Apr, 2026}{% workshop: July, 2025
-  Johanna Orsholm, John Quinto, Hannu Autto, Gaia Banelyte, Nicolas Chazot, Jeremy deWaard, Stephanie deWaard, Arielle Farrell, Brendan Furneaux, Bess Hardwick, Nao Ito, Amlan Kar, Oula Kalttopää, Deirdre Kerdraon, Erik Kristensen, Jaclyn McKeown, Tommi Mononen, Ellen Nein, Hanna Rogers, Tomas Roslin, Paula Schmitz, Jayme Sones, Maija Sujala, Amy Thompson, Evgeny V. Zakharov, Iuliia Zarubiieva, Akshita Gupta, \textbf{Scott C. Lowe}, Graham W. Taylor.
+  Johanna Orsholm, John Quinto$^\S$, Hannu Autto, Gaia Banelyte, Nicolas Chazot, Jeremy deWaard, Stephanie deWaard, Arielle Farrell, Brendan Furneaux, Bess Hardwick, Nao Ito, Amlan Kar, Oula Kalttopää, Deirdre Kerdraon, Erik Kristensen, Jaclyn McKeown, Tommi Mononen, Ellen Nein, Hanna Rogers, Tomas Roslin, Paula Schmitz, Jayme Sones, Maija Sujala, Amy Thompson, Evgeny V. Zakharov, Iuliia Zarubiieva, Akshita Gupta, \textbf{Scott~C.~Lowe}, Graham W. Taylor.
   ``A multi-modal dataset for insect biodiversity with imagery and DNA at the trap and individual level''.
   % \textit{\href{https://neurips.cc/virtual/2025/loc/san-diego/128773}{Imageomics: Discovering Biological Knowledge from Images Using AI} Workshop, NeurIPS 2025}.
   \emph{Scientific Data} \textbf{13}, 630 (2026).
@@ -383,22 +475,8 @@ Advisor: Prof. \NathalieRochefort{}.
   % [\href{https://openreview.net/forum?id=Kn8bz1ZPvE}{OpenReview}]
 }% https://neurips.cc/virtual/2025/loc/san-diego/workshop/109558
 
-\cvitem{Mar, 2026}{
-  \textbf{Scott C. Lowe}, Anthony Fuller, Sageev Oore, Graham W. Taylor, Evan Shelhamer.
-  ``Hidden-Layer Self-Distillation Yields Drift-Resilient Visual Representations''.
-  \textit{Catch, Adapt, and Operate: Monitoring ML Models Under Drift Workshop, ICLR 2026}.
-  [\href{https://openreview.net/forum?id=pa3zBGDMAd}{OpenReview}]
-}
-
-\cvitem{Mar, 2026}{
-  \textbf{Scott C. Lowe}, Anthony Fuller, Sageev Oore, Evan Shelhamer, Graham W. Taylor.
-  ``Bridging Generative and Predictive Paradigms via Hidden-Self-Distillation''.
-  \textit{Multimodal Intelligence: Next Token Prediction \& Beyond Workshop, ICLR 2026}.
-  [\href{https://openreview.net/forum?id=YkMrN90inE}{OpenReview}]
-}
-
 \cvitem{Feb, 2026}{ % Workshop: Nov, 2023
-  Pablo Millan Arias*, Niousha Sadjadi*, Monireh Safari*, ZeMing Gong, Austin T. Wang, Joakim Bruslund Haurum, Iuliia Zarubiieva, Dirk Steinke, Lila Kari, Angel X. Chang, \textbf{Scott C. Lowe}$^\dagger$, Graham W. Taylor$^\dagger$.
+  Pablo Millan Arias$^\S$*, Niousha Sadjadi$^\S$*, Monireh Safari$^\S$*, ZeMing Gong$^\S$, Austin T. Wang, Joakim Bruslund Haurum, Iuliia Zarubiieva, Dirk Steinke, Lila Kari, Angel X. Chang, \textbf{Scott~C.~Lowe}$^\dagger$, Graham W. Taylor$^\dagger$.
   % (2023, November).
   ``BarcodeBERT: Transformers for Biodiversity Analysis''.
   % (Under review.)
@@ -410,95 +488,31 @@ Advisor: Prof. \NathalieRochefort{}.
   % [\href{https://openreview.net/forum?id=0nRednHa2h}{OpenReview}]
 }% https://neurips.cc/virtual/2023/workshop/66514
 
-\cvitem{Dec, 2025}{
-  Tiancheng Gao, \textbf{Scott C. Lowe}, Brendan Furneaux, Angel X. Chang, Graham W. Taylor.
-  ``BarcodeMamba+: Advancing State-Space Models for Fungal Biodiversity Research''.
-  \textit{\href{https://neurips.cc/virtual/2025/loc/san-diego/128739}{Imageomics: Discovering Biological Knowledge from Images Using AI} Workshop, NeurIPS 2025}.
-  \arxiv{2512.15931}.
-  [\href{https://openreview.net/forum?id=wOgcLKq1Hg}{OpenReview}]
-}% https://neurips.cc/virtual/2025/loc/san-diego/workshop/109558
-
-\cvitem{Dec, 2025}{
-  Sageev Oore*, Finlay Miller*, Chandramouli Shama Sastry, Sri Harsha Dumpala, Marvin F. da Silva, Daniel Oore, \textbf{Scott C. Lowe}.
-  ``A Loopy Framework and Tool for Real-time Human-AI Music Collaboration''.
-  \textit{\href{https://neurips.cc/virtual/2025/loc/san-diego/123765}{Artificial Intelligence for Music: Where Creativity Meets Computation} Workshop, NeurIPS 2025}.
-  [\href{https://openreview.net/forum?id=nXHczMetxK}{OpenReview}]
-}% https://neurips.cc/virtual/2025/loc/san-diego/workshop/109534
-
-\begin{comment}
-\cvitem{Dec, 2025}{
-  Sageev Oore, Finlay Miller, Chandramouli Shama Sastry, Sri Harsha Dumpala, Marvin F. da Silva, Daniel Oore, \textbf{Scott C. Lowe}.
-  ``Robust Personalized Human-AI Collaboration with SmartLooper''.
-  \textit{\href{https://neurips.cc/virtual/2025/loc/san-diego/123748}{Artificial Intelligence for Music: Where Creativity Meets Computation} Workshop, NeurIPS 2025}.
-  [\href{https://openreview.net/forum?id=y7yd00Fstl}{OpenReview}]
-}% https://neurips.cc/virtual/2025/loc/san-diego/workshop/109534
-\end{comment}
-
-\cvitem{Dec, 2025}{
-  John Quinto, \textbf{Scott C. Lowe}, Akshita Gupta, Johanna Orsholm, Prajakta Darade, Iuliia Zarubiieva, Brendan Furneaux, Tommi Mononen, Tomas Roslin, Graham W. Taylor.
-  ``BugSR: Improving Tiny Instance Segmentation on the MassID45 Dataset''.
-  \textit{\href{https://neurips.cc/virtual/2025/loc/san-diego/128769}{Imageomics: Discovering Biological Knowledge from Images Using AI} Workshop, NeurIPS 2025}.
-  [\href{https://openreview.net/forum?id=OYK7psfeNe}{OpenReview}]
-}% https://neurips.cc/virtual/2025/loc/san-diego/workshop/109558
-
-\cvitem{Aug, 2025}{
-  ZeMing Gong, Chuanqi Tang, Xiaoliang Huo, Nicholas Pellegrino, Austin Wang, Graham W. Taylor, Angel X. Chang, \textbf{Scott C. Lowe$^\dagger$}, Joakim Bruslund Haurum$^\dagger$.
-  % (2025, July).
-  ``Hyperbolic Multimodal Representation Learning for Biological Taxonomies''.
-  \textit{\href{https://iccv.thecvf.com/virtual/2025/workshop/2763}{2nd Beyond Euclidean Workshop: Hyperbolic and Hyperspherical Learning for Computer Vision} Workshop, ICCV 2025}.
-  \arxiv{2508.16744}.
-}
-
 \cvitem{May, 2025}{ % Sep
-  Alyson East, Elizabeth G. Campolongo, Luke Meyers, S. M. Rayeed, Samuel Stevens, Iuliia Zarubiieva, Isadora E. Fluck, Jennifer C. Girón, Maximiliane Jousse, \textbf{Scott Lowe}, Kayla I. Perry, Isabelle Betancourt, Noah Charney, Evan Donoso, Nathan Fox, Kim J. Landsbergen, Ekaterina Nepovinnykh, Michelle Ramirez, Parkash Singh, Khum Thapa-Magar, Matthew Thompson, Evan Waite, Tanya Berger-Wolf, Hilmar Lapp, Paula Mabee, Graham Taylor, Sydne Record.
+  Alyson East, Elizabeth G. Campolongo, Luke Meyers, S. M. Rayeed, Samuel Stevens, Iuliia Zarubiieva, Isadora E. Fluck, Jennifer C. Girón, Maximiliane Jousse, \textbf{Scott~Lowe}, Kayla I. Perry, Isabelle Betancourt, Noah Charney, Evan Donoso, Nathan Fox, Kim J. Landsbergen, Ekaterina Nepovinnykh, Michelle Ramirez, Parkash Singh, Khum Thapa-Magar, Matthew Thompson, Evan Waite, Tanya Berger-Wolf, Hilmar Lapp, Paula Mabee, Graham Taylor, Sydne Record.
   % (2025, May).
   ``Optimizing Image Capture for Computer Vision-Powered Taxonomic Identification and Trait Recognition of Biodiversity Specimens''.
   \emph{Methods in Ecology and Evolution}, 16, 2260–2275. \doi{10.1111/2041-210X.70140}.
 }
 
-\cvitem{Feb, 2025}{
-  Monireh Safari*, Pablo Millan Arias*, \textbf{Scott C. Lowe}, Lila Kari, Angel X. Chang, Graham W. Taylor.
-  % (2025, February).
-  ``Enhancing DNA Foundation Models to Address Masking Inefficiencies''.
-  \textit{\href{https://iclr.cc/virtual/2025/32588}{Artificial Intelligence for Nucleic Acids (AI4NA)} Workshop, ICLR 2025}.
-  \arxiv{2502.18405}.
-  [\href{https://openreview.net/forum?id=DGs7lmqkkU}{OpenReview}]
-}% https://iclr.cc/virtual/2025/workshop/23998https://iclr.cc/virtual/2025/32588
-
 % D Steinke, S Ratnasingham, J Agda, H Ait Boutou, I Box, M Boyle, D Chan, C Feng, \textbf{SC Lowe}, JTA McKeown, J McLeod, A Sanchez, I Smith, S Walker, CY-Y Wei, PDN Hebert
+\cvitem{Feb, 2025}{ % arXiv: May 2024
+  \textbf{Scott~C.~Lowe}*, Benjamin Misiuk*, Isaac Xu$^\S$*, Shakhboz Abdulazizov$^\S$, Amit R. Baroi$^\S$, Alex C. Bastos, Merlin Best, Vicki Ferrini, Ariell Friedman, Deborah Hart, Ove Hoegh-Guldberg, Daniel Ierodiaconou, Julia Mackin-McLaughlin, Kathryn Markey, Pedro S. Menandro, Jacquomo Monk, Shreya Nemani, John O'Brien, Elizabeth Oh, Luba Y. Reshitnyk, Katleen Robert, Chris M. Roelfsema, Jessica A. Sameoto, Alexandre C. G. Schimel, Jordan A. Thomson, Brittany R. Wilson, Melisa C. Wong, Craig J. Brown$^\dagger$, Thomas Trappenberg$^\dagger$.
+  ``BenthicNet: A global compilation of seafloor images for deep learning applications''.
+  \emph{Scientific Data} \textbf{12}, 230 (2025).
+  \doi{10.1038/s41597-025-04491-1}.
+  \arxiv{2405.05241}.
+  \pubmed{39920123}.
+}
+
 \cvitem{Oct, 2024}{
-  Dirk Steinke, Sujeevan Ratnasingham, Jireh Agda, Hamzah Ait Boutou, Isaiah Box, Mary Boyle, Dean Chan, Corey Feng, \textbf{Scott C. Lowe}, Jaclyn T.A. McKeown, Joschka McLeod, Alan Sanchez, Ian Smith, Spencer Walker, Catherine Y.-Y. Wei, Paul D.N. Hebert.
+  Dirk Steinke, Sujeevan Ratnasingham, Jireh Agda, Hamzah Ait Boutou, Isaiah Box, Mary Boyle, Dean Chan, Corey Feng, \textbf{Scott~C.~Lowe}, Jaclyn T.A. McKeown, Joschka McLeod, Alan Sanchez, Ian Smith, Spencer Walker, Catherine Y.-Y. Wei, Paul D.N. Hebert.
   % (2024, October).
   ``Towards a Taxonomy Machine – A Training Set of 5.6 Million Arthropod Images''.
   Data \textbf{2024}, 9(11), 122.
   \doi{10.3390/data9110122}
 }
 
-\cvitem{Jun, 2024}{
-  Isaac Xu, Benjamin Misiuk, \textbf{Scott C. Lowe}, Martin Gillis, Craig J. Brown, Thomas Trappenberg.
-  % (2024, June).
-  ``Hierarchical Multi-Label Classification with Missing Information for Benthic Habitat Imagery,''
-  In Proceedings of the \emph{2024 International Joint Conference on Neural Networks (IJCNN 2024)}.
-  \doi{10.1109/IJCNN60899.2024.10650176}.
-  \arxiv{2409.06618}.
-}
-
-\cvitem{Dec, 2023}{
-  Zahra Gharaee*, ZeMing Gong*, Nicholas Pellegrino*, Iuliia Zarubiieva, Joakim Bruslund Haurum, \textbf{Scott C. Lowe}, Jaclyn T.A. McKeown, Chris C.Y. Ho, Joschka McLeod, Yi-Yun C. Wei, Jireh Agda, Sujeevan Ratnasingham, Dirk Steinke$^\dagger$, Angel X. Chang$^\dagger$, Graham W. Taylor$^\dagger$, Paul Fieguth$^\dagger$.
-  % (2023, December).
-  ``A Step Towards Worldwide Biodiversity Assessment: The BIOSCAN-1M Insect Dataset''.
-  In \emph{\href{https://proceedings.neurips.cc/paper_files/paper/2023/file/87dbbdc3a685a97ad28489a1d57c45c1-Paper-Datasets_and_Benchmarks.pdf}{Proceedings} of the Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS 2023)}.
-  \arxiv{2307.10455}.
-  [\href{https://openreview.net/forum?id=ZDnnzsado4}{OpenReview}]
-}
-
-\cvitem{Oct, 2023}{
-  Meagan Sinclair, Hamed Hanafi Alamdari, Julia Paffile, Kamal El-Sankary, \textbf{Scott~Lowe}, Stephen Driscoll, Sageev Oore, Heather Tomson, Gregory Begin, Guillermo Aristi, Michael Schmidt, David Roach, Thomas Penzel, Ingo Fietze, Sanjay R. Patel, Reena Mehra, Debra Morrison.
-  % (2023, October).
-  ``The Beginning of the AI-Enabled Preventative PAP Therapy Era: A First-in-Human Proof of Concept Interventional Study''.
-  \emph{IEEE Transactions on Biomedical Engineering}.
-  \doi{10.1109/TBME.2023.3263379}.
-}
 
 \cvitem{Sep, 2023}{
   Hamed Hanafi, Julia Paffile, Meagan Sinclair, Kamal El-Sankary, \textbf{Scott~Lowe}, Sageev Oore, Stephen Driscoll, Thomas Penzel, Ingo Fietze, Sanjay Patel, Reena Mehra, Debra Morrison.
@@ -508,16 +522,8 @@ Advisor: Prof. \NathalieRochefort{}.
   \doi{10.1183/13993003.congress-2023.PA573}.
 }
 
-\cvitem{Sep, 2022}{
-  Isaac Xu, \textbf{Scott C. Lowe}, Thomas Trappenberg.
-  % (2022, September).
-  ``Label-Free Monitoring of Self-Supervised Learning Progress''.
-  \emph{2022 IEEE Canadian Conference on Electrical and Computer Engineering (CCECE)}, Halifax, Nova Scotia, Canada, 2022, pp 78--84.
-  \doi{10.1109/CCECE49351.2022.9918377}.
-}
-
 \cvitem{Aug, 2022}{
-  \textbf{Scott C. Lowe}, Louise P. McGarry, Jessica Douglas, Jason Newport, Sageev Oore, Christopher Whidden, Daniel J. Hasselman.
+  \textbf{Scott~C.~Lowe}, Louise P. McGarry, Jessica Douglas, Jason Newport, Sageev Oore, Christopher Whidden, Daniel J. Hasselman.
   % (2022, August).
   ``Echofilter: A Deep Learning Segmentation Model to Improve the Automation, Standardization, and Timeliness for Post-Processing Echosounder Data in Tidal Energy Streams''. \emph{Frontiers in Marine Science}. \textbf{9}:867857.
   \doi{10.3389/fmars.2022.867857}.
@@ -532,30 +538,8 @@ Advisor: Prof. \NathalieRochefort{}.
   \doi{10.1109/TBME.2021.3138965}.
 }
 
-\cvitem{Nov, 2021}{
-  \textbf{Scott C. Lowe}, Thomas Trappenberg, Sageev Oore.
-  % (2021, November).
-  ``LogAvgExp Provides a Principled and Performant Global Pooling Operator''.
-  \arxiv{2111.01742}.
-}
-
-\cvitem{Nov, 2019}{
-  Lu Yihe, \textbf{Scott C. Lowe}, Penelope A. Lewis, Mark C. W. van Rossum.
-  % (2019, November).
-  ``Program synthesis performance constrained by non-linear spatial relations in Synthetic Visual Reasoning Test''.
-  \arxiv{1911.07721}.
-}
-
-\cvitem{Jun, 2019}{
-  Nicholas Meade*, Nicholas Barreyre*, \textbf{Scott C. Lowe}, Sageev Oore.
-  % (2019, June).
-  ``Exploring Conditioning for Generative Music Systems with Human-Interpretable~Controls''.
-  In \emph{\href{http://computationalcreativity.net/iccc2019/assets/iccc_proceedings_2019.pdf}{Proceedings} of the 10\textsuperscript{th} International Conference on Computational Creativity (ICCC 2019)}.
-  \arxiv{1907.04352}.
-}
-
 \cvitem{Feb, 2018}{
-  Sander W. Keemink*, \textbf{Scott C. Lowe*}, Janelle M. P. Pakan, Mark C. W. van Rossum, Nathalie L. Rochefort.
+  Sander W. Keemink*, \textbf{Scott~C.~Lowe*}, Janelle M. P. Pakan, Mark C. W. van Rossum, Nathalie L. Rochefort.
   % (2018, February).
   ``FISSA: A neuropil decontamination toolbox for calcium imaging signals''.
   \emph{Scientific Reports}, \textbf{8}.
@@ -564,7 +548,7 @@ Advisor: Prof. \NathalieRochefort{}.
 }
 
 \cvitem{Jan, 2018}{
-  Daniel Zaldivar, Jozien Goense, \textbf{Scott C. Lowe}, Nikos K. Logothetis, Stefano Panzeri.
+  Daniel Zaldivar, Jozien Goense, \textbf{Scott~C.~Lowe}, Nikos K. Logothetis, Stefano Panzeri.
   % (2018, January).
   ``Dopamine is signaled by mid-frequency oscillations and boosts output-layers visual information in visual cortex''.
   \emph{Current Biology}, \textbf{28}(2).
@@ -573,7 +557,7 @@ Advisor: Prof. \NathalieRochefort{}.
 }
 
 \cvitem{Aug, 2016}{
-  Janelle M. P. Pakan, \textbf{Scott C. Lowe}, Evelyn Dylda, Sander W. Keemink, Stephen P. Currie, Christopher A. Coutts, Nathalie L. I. Rochefort.
+  Janelle M. P. Pakan, \textbf{Scott~C.~Lowe}, Evelyn Dylda, Sander W. Keemink, Stephen P. Currie, Christopher A. Coutts, Nathalie L. I. Rochefort.
   % (2016, August).
   ``Behavioral-state modulation of inhibition is context-dependent and cell type specific in mouse visual cortex''.
   \emph{eLIFE}, \textbf{5}:e14985.
@@ -582,7 +566,7 @@ Advisor: Prof. \NathalieRochefort{}.
 }
 
 \cvitem{Sep, 2015}{
-  Michel Besserve, \textbf{Scott C. Lowe}, Nikos, K. Logothetis, Bernhard Sch\"{o}lkopf, Stefano Panzeri.
+  Michel Besserve, \textbf{Scott~C.~Lowe}, Nikos, K. Logothetis, Bernhard Sch\"{o}lkopf, Stefano Panzeri.
   % (2015, September).
   ``Shifts of gamma phase across primary visual cortical sites reflect dynamic stimulus modulated information transfer''.
   \emph{PLoS Biology}, \textbf{13}(9): e1002257.
@@ -590,9 +574,122 @@ Advisor: Prof. \NathalieRochefort{}.
   \pubmed{26394205}.
 }
 
-% \textbf{SC Lowe}, X Chen, MCW van Rossum, S Panzeri, A Thiele.
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%\clearpage
+\subsection{Workshop papers}% and abstracts}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\cvitem{Sep, 2026}{% accepted Sep 2026; workshop Dec 2026
+  Neelu Madan, John Quinto$^\S$, \textbf{Scott~C.~Lowe}, Johanna Orsholm, Tomas Roslin, Tommi Mononen, Nicolas Chazot, Brendan Furneaux, Otso Ovaskainen, Andreas Møgelmose, Thomas B. Moeslund, Graham W. Taylor.
+  ``Same Errors, Different Models: Benchmarking Taxonomic Classification on MassID45''.
+  To appear at \textit{I Can't Believe It's Not Better: Failure Modes of AI in Biology Workshop, NeurIPS 2026, Sydney}.
+  [\href{https://openreview.net/forum?id=KcjIkxm3u5}{OpenReview}]
+}
+
+\cvitem{Mar, 2026}{
+  \textbf{Scott~C.~Lowe}, Anthony Fuller, Sageev Oore, Graham W. Taylor, Evan Shelhamer.
+  ``Hidden-Layer Self-Distillation Yields Drift-Resilient Visual Representations''.
+  \textit{Catch, Adapt, and Operate: Monitoring ML Models Under Drift Workshop, ICLR 2026}.
+  [\href{https://openreview.net/forum?id=pa3zBGDMAd}{OpenReview}]
+}
+
+\cvitem{Mar, 2026}{
+  \textbf{Scott~C.~Lowe}, Anthony Fuller, Sageev Oore, Evan Shelhamer, Graham W. Taylor.
+  ``Bridging Generative and Predictive Paradigms via Hidden-Self-Distillation''.
+  \textit{Multimodal Intelligence: Next Token Prediction \& Beyond Workshop, ICLR 2026}.
+  [\href{https://openreview.net/forum?id=YkMrN90inE}{OpenReview}]
+}
+
+\cvitem{Dec, 2025}{
+  Tiancheng Gao$^\S$, \textbf{Scott~C.~Lowe}, Brendan Furneaux, Angel X. Chang, Graham W. Taylor.
+  ``BarcodeMamba+: Advancing State-Space Models for Fungal Biodiversity Research''.
+  \textit{\href{https://neurips.cc/virtual/2025/loc/san-diego/128739}{Imageomics: Discovering Biological Knowledge from Images Using AI} Workshop, NeurIPS 2025}.
+  \arxiv{2512.15931}.
+  [\href{https://openreview.net/forum?id=wOgcLKq1Hg}{OpenReview}]
+}% https://neurips.cc/virtual/2025/loc/san-diego/workshop/109558
+
+\cvitem{Dec, 2025}{
+  Sageev Oore*, Finlay Miller$^\S$*, Chandramouli Shama Sastry, Sri Harsha Dumpala, Marvin F. da Silva, Daniel Oore, \textbf{Scott~C.~Lowe}.
+  ``A Loopy Framework and Tool for Real-time Human-AI Music Collaboration''.
+  \textit{\href{https://neurips.cc/virtual/2025/loc/san-diego/123765}{Artificial Intelligence for Music: Where Creativity Meets Computation} Workshop, NeurIPS 2025}.
+  [\href{https://openreview.net/forum?id=nXHczMetxK}{OpenReview}]
+}% https://neurips.cc/virtual/2025/loc/san-diego/workshop/109534
+
+\cvitem{Dec, 2025}{
+  John Quinto$^\S$, \textbf{Scott~C.~Lowe}, Akshita Gupta, Johanna Orsholm, Prajakta Darade, Iuliia Zarubiieva, Brendan Furneaux, Tommi Mononen, Tomas Roslin, Graham W. Taylor.
+  ``BugSR: Improving Tiny Instance Segmentation on the MassID45 Dataset''.
+  \textit{\href{https://neurips.cc/virtual/2025/loc/san-diego/128769}{Imageomics: Discovering Biological Knowledge from Images Using AI} Workshop, NeurIPS 2025}.
+  [\href{https://openreview.net/forum?id=OYK7psfeNe}{OpenReview}]
+}% https://neurips.cc/virtual/2025/loc/san-diego/workshop/109558
+
+\cvitem{Aug, 2025}{
+  ZeMing Gong$^\S$, Chuanqi Tang, Xiaoliang Huo$^\S$, Nicholas Pellegrino, Austin Wang, Graham W. Taylor, Angel X. Chang, \textbf{Scott~C.~Lowe$^\dagger$}, Joakim Bruslund Haurum$^\dagger$.
+  % (2025, July).
+  ``Hyperbolic Multimodal Representation Learning for Biological Taxonomies''.
+  \textit{\href{https://iccv.thecvf.com/virtual/2025/workshop/2763}{2nd Beyond Euclidean Workshop: Hyperbolic and Hyperspherical Learning for Computer Vision} Workshop, ICCV 2025}.
+  \arxiv{2508.16744}.
+}
+
+\cvitem{Feb, 2025}{
+  Monireh Safari$^\S$*, Pablo Millan Arias$^\S$*, \textbf{Scott~C.~Lowe}, Lila Kari, Angel X. Chang, Graham W. Taylor.
+  % (2025, February).
+  ``Enhancing DNA Foundation Models to Address Masking Inefficiencies''.
+  \textit{\href{https://iclr.cc/virtual/2025/32588}{Artificial Intelligence for Nucleic Acids (AI4NA)} Workshop, ICLR 2025}.
+  \arxiv{2502.18405}.
+  [\href{https://openreview.net/forum?id=DGs7lmqkkU}{OpenReview}]
+}% https://iclr.cc/virtual/2025/workshop/23998https://iclr.cc/virtual/2025/32588
+
+\begin{comment}
+\cvitem{Dec, 2025}{
+  Sageev Oore, Finlay Miller$^\S$, Chandramouli Shama Sastry, Sri Harsha Dumpala, Marvin F. da Silva, Daniel Oore, \textbf{Scott~C.~Lowe}.
+  ``Robust Personalized Human-AI Collaboration with SmartLooper''.
+  \textit{\href{https://neurips.cc/virtual/2025/loc/san-diego/123748}{Artificial Intelligence for Music: Where Creativity Meets Computation} Workshop, NeurIPS 2025}.
+  [\href{https://openreview.net/forum?id=y7yd00Fstl}{OpenReview}]
+}% https://neurips.cc/virtual/2025/loc/san-diego/workshop/109534
+\end{comment}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Conference abstracts}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\cvitem{Sep, 2025}{
+  Hamed Hanafi, Matthew Hickey, Kazi Antor Hasan, Najmeh Sadatnejad, Guillermo Aristi, Meagan Sinclair, Gregory Begin, Megan Neil, Sarah Henley, Steve Driscoll, \textbf{Scott~Lowe}, Ingo Fietze, Thomas Penzel, Reena Mehra, Yuksel Peker, Sanja Jelic, Debra Morrison.
+  ``Enhanced PAP adherence using cMAP%\textsuperscript{\textregistered}
+  for sleep apnea therapy vs.\ APAP: A preliminary 3-month analysis''.
+  \emph{European Respiratory Journal} \textbf{66}(Suppl.~69) PA6030.
+  \doi{10.1183/13993003.congress-2025.PA6030}.
+}
+
+\cvitem{Sep, 2025}{
+  Hamed Hanafi, Matthew Hickey, Kazi Antor Hasan, Steve Driscoll, \textbf{Scott~Lowe}, Maryam Elsankary, Ingo Fietze, Thomas Penzel, Reena Mehra, Sanja Jelic, Yuksel Peker, Debra Morrison.
+  ``Identification of Obstructive Apnea Signatures Result in Phenotypes with Distinct Biometric Differences''.
+  \emph{European Respiratory Journal} \textbf{66}(Suppl.~69) PA3205.
+  \doi{10.1183/13993003.congress-2025.PA3205}.
+}
+
+\cvitem{May, 2025}{
+  Hamed Hanafi, Matthew Hickey, Kazi Antor Hasan, Steve Driscoll, \textbf{Scott~Lowe}, Ingo Fietze, Thomas Penzel, Reena Mehra, Sanja Jelic, Debra Morrison.
+  ``Distinct Biometric Differences in Obstructive Sleep Apnea Patients Phenotyped Based on Airflow Patterns Highlight Potential for Customized Treatment Algorithm Development''.
+  \emph{American Journal of Respiratory and Critical Care Medicine} \textbf{211}:A6920.
+  \doi{10.1164/ajrccm.2025.211.Abstracts.A6920}.
+}
+
+\cvitem{Apr, 2025}{
+  Angus Galloway, Peter C. Esselman, David M. Warner, Timothy P. O'Brien, Hannah B. Blair, Lars G. Rudstam, Suresh A. Sethi, Jeremy Holden, \textbf{Scott~C.~Lowe}.
+  ``Echofilter 2.0: The echogram event horizon''.
+  Presented at the \emph{ICES Working Group on Fisheries Acoustics, Science and Technology (WGFAST) 2025}, Marine and Freshwater Research Institute, Hafnarfj\"{o}r\dh{}ur, Iceland.
+  [\href{https://wgfast.hafro.is/pdfs/ICES\%20WGFAST_book_of_abstracts\%202025.pdf}{Abstract}]
+}
+
+\cvitem{Oct, 2019}{
+  Nicholas Barreyre$^\S$*, Nicholas Meade$^\S$*, Sageev Oore, Vlado Keselj, \textbf{Scott~C.~Lowe}.
+  ``Bitwise Conditional Controls Over Language Models for Music and Text''.
+  Presented at the \emph{2019 Science Atlantic Conference for Mathematics, Statistics and Computer Science}, Dalhousie University, Halifax, Canada.
+  \textbf{Awarded third place}.
+}
+
 \cvitem{Jul, 2013}{
-  \textbf{Scott C. Lowe}, Xing Chen, Mark C. W. van Rossum, Stefano Panzeri, Alex Thiele.
+  \textbf{Scott~C.~Lowe}, Xing Chen, Mark C. W. van Rossum, Stefano Panzeri, Alex Thiele.
   % (2013, July).
   ``Decoding spiking activity in V4, but not V1, correlates with behavioural performance in perceptual learning task''.
   \emph{Twenty Second Annual Computational Neuroscience Meeting: CNS*2013}, Paris, France.
@@ -600,35 +697,81 @@ Advisor: Prof. \NathalieRochefort{}.
   \doi{10.1186/1471-2202-14-S1-P385}.
 }
 
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Preprints}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\cvitem{Nov, 2026}{
+  Emma Boehly$^\S$, \textbf{Scott~C.~Lowe}, Ken A. Thompson, Anthony Fuller, Will Armstrong, Iuliia Zarubiieva, Neelu Madan, Tiancheng Gao, Sameer Padhye, Jayme Sones, Kate H. J. Perez, Bess Hardwick, Brendan Furneaux, Evgeny V. Zakharov, Dirk Steinke, Jeremy R. deWaard, Stephanie L. deWaard, Jaclyn McKeown, Norman Monkhouse, Cole Pace, Sujeevan Ratnasingham, Raina Schmuck, Amy Thompson, Jorge L. León-Cortés, Luciano Cagnolo, Julieta Soledad Arena, Jeremías Domínguez Masciale, Errol Douwes, Elli Groner, Masae Iwamoto Ishihara, Shunsuke Matsuoka, Mailyn A. Gonzalez, Alexandre Antonelli, Renata S. Sousa-Lima, Armin Niessner, Patrícia Guedes, Elizabeth G. Biro, Zuania Colón-Piñeiro, Dezene P. W. Huber, Santosh Mazumdar, Magda Bou Dagher Kharrat, Eddie P. Mondejar, Pablo Luis Tubaro, Eugene Marais, Marie-Eugénie Maggia, Darío Alejandro Lijtmaer, Sean W. J. Prosser, Andrea Murillo-Vázquez, Paola Pulido-Santacruz, Paula Leitman, Thiago Arnt Dorigo, Nao Ito, Paul Knoops, Maria L. Kuzmina, Hikaru Morishita, Keishi Kimoto, Dimby Raharinjanahary, Rhian J. Smith, Solny A. Adalsteinsson, Kevin G. Borja-Acosta, Paul Amouroux, Angela M. Mendoza-Henao, Angélica Diaz-Pulido, Anamaria Dal Molin, Luke L. Powell, Diego Inclan, Alice Calvente, David Dunson, Brian Fisher, Tomas Roslin, Otso Ovaskainen, Paul D. N. Hebert, Graham W. Taylor.
+  ``BIOTRAM: Biochemistry-informed transformer for relative abundance via metabarcoding''.
+  \emph{Under review.}
+  \arxiv{2611.05418}.
+}
+
+\cvitem{Oct, 2026}{
+  Kevin Kasa, \textbf{Scott~C.~Lowe}, Graham W. Taylor.
+  ``Using Set Learning to Improve Set-Valued Classifiers on Long-tailed Data''.
+  \emph{Under review.}
+  \arxiv{2610.27443}.
+}
+
+\cvitem{Sep, 2026}{
+  Anthony Fuller, \textbf{Scott~C.~Lowe}, Daniel G. Kyrollos, Graham W. Taylor$^\dagger$, Evan Shelhamer$^\dagger$, James R. Green$^\dagger$.
+  ``Masked Swingers: Harnessing Data Augmentation to Advance Autoencoders for Self-Supervised Learning''.
+  \emph{Under review.}
+  \arxiv{2609.38278}.
+}
+
+\cvitem{Sep, 2026}{
+  Monireh Safari$^\S$*, Pablo Millan Arias$^\S$*, \textbf{Scott~C.~Lowe}, Lila Kari, Angel X. Chang, Graham W. Taylor.
+  ``{BarcodeMAE+}: Rethinking Masked Pretraining and Global Representations for DNA Barcode Foundation Models''.
+  \emph{Under review.}
+  \arxiv{2609.35877}.
+}
+
+\cvitem{Nov, 2021}{
+  \textbf{Scott~C.~Lowe}, Thomas Trappenberg, Sageev Oore.
+  % (2021, November).
+  ``LogAvgExp Provides a Principled and Performant Global Pooling Operator''.
+  \arxiv{2111.01742}.
+}
+
+\cvitem{Nov, 2019}{
+  Lu Yihe, \textbf{Scott~C.~Lowe}, Penelope A. Lewis, Mark C. W. van Rossum.
+  % (2019, November).
+  ``Program synthesis performance constrained by non-linear spatial relations in Synthetic Visual Reasoning Test''.
+  \arxiv{1911.07721}.
+}
+
 % \cvitem{\textit{in preparation}}{
-% \textbf{Scott C. Lowe}, Daniel Zaldivar, Yusuke Murayama, Mark C. W. van Rossum, Nikos K. Logothetis, Stefano Panzeri (to be submitted).
+% \textbf{Scott~C.~Lowe}, Daniel Zaldivar, Yusuke Murayama, Mark C. W. van Rossum, Nikos K. Logothetis, Stefano Panzeri (to be submitted).
 % ``Lamina and Frequency Distribution of Information in Primary Visual Cortex''.
 % }
 
 % \cvitem{\textit{in preparation}}{
-% \textbf{Scott C. Lowe}, Xing Chen, Alex Thiele, Mark C. W. van Rossum, Stefano Panzeri (in preparation).
+% \textbf{Scott~C.~Lowe}, Xing Chen, Alex Thiele, Mark C. W. van Rossum, Stefano Panzeri (in preparation).
 % ``Changes in V1 and V4 encoding of visual contrast during perceptual learning''.
 % }
 
 % \cvitem{---}{
-% \textbf{Scott C. Lowe}, Finlay Maguire, Gavin Gray (in preparation).
+% \textbf{Scott~C.~Lowe}, Finlay Maguire, Gavin Gray (in preparation).
 %``Predicting the onset of epileptic seizures from intracranial-EEG: which features are most useful''.
 % }
 
 %----------------------------------------------------------------------------------------
 %\clearpage
-\section{Supervision experience}
+\section{Supervision}
 
-\cventry{since 2025}{ZeMing Gong}{Ph.D. in Computer Science}{Simon Fraser University}{Topic: Multimodal hyperbolic embeddings for insect biodiversity modelling.}{Co-supervised with Prof.~\AngelChang{}}
+\cventry{since 2024}{ZeMing Gong}{Master of Science in Computing Science (2024--2025), then Ph.D. in Computing Science (since 2025)}{Simon Fraser University}{\href{https://summit.sfu.ca/item/40177}{Thesis}: ``Contrastive Pretraining for Biodiversity with DNA Barcode: Bridging Vision and Genomics for Biodiversity Monitoring at Scale''. Ph.D. topic: multimodal hyperbolic embeddings for insect biodiversity modelling.}{Co-supervised with Prof.~\AngelChang{}}
 \cventry{since 2025}{Emma Boehly}{Research Associate}{Vector Institute}{Topic: Estimating species abundance from metabarcoding data.}{Co-supervised with Prof.~\GrahamTaylor{}}
-\cventry{since 2025}{Tiancheng Gao}{Master of Computer Science}{University of Guelph}{Topic: State space models (Mamba) for biodiversity modelling.}{Co-supervised with Prof.~\GrahamTaylor{}}
+\cventry{since 2025}{Tiancheng Gao}{Master of Applied Science (2025--2026), then Ph.D. (since 2026)}{University of Guelph}{\href{https://hdl.handle.net/10214/30164}{Thesis}: ``State-Space Models for Scalable and Hierarchical DNA Barcoding in Biodiversity Analysis''.}{Co-supervised with Prof.~\GrahamTaylor{}}
 \cventry{2025}{Xiaoliang Huo}{Ph.D. in Computer Science}{Simon Fraser University}{Topic: Multimodal hyperbolic embeddings for insect biodiversity modelling.}{Co-supervised with Prof.~\AngelChang{}}
-\cventry{2025 -- 2025}{Kevin Kasa}{Master of Computer Science}{University of Guelph}{Topic: Set learning for set-valued classifiers.}{Co-supervised with Prof.~\GrahamTaylor{}}
-\cventry{2024 -- 2025}{ZeMing Gong}{Master of Computer Science}{Simon Fraser University}{Topic: Multimodal alignment for insect biodiversity modelling.}{Co-supervised with Prof.~\AngelChang{}}
-\cventry{since 2024}{Monireh Safari}{Ph.D. in Computer Science}{University of Waterloo}{Self-supervised learning for barcode DNA classification.}{Co-supervised with Prof.~\LilaKari{}}
+% \cventry{2024}{Kevin Kasa}{Master of Applied Science}{University of Guelph}{\href{https://hdl.handle.net/10214/28652}{Thesis}: ``Investigating Conformal Prediction Under Distribution Shift and Long-tailed Data''.}{Mentored the final stage of thesis work and the resulting paper, with Prof.~\GrahamTaylor{}}
+\cventry{2024 -- 2026}{Monireh Safari}{Ph.D. in Computer Science}{University of Waterloo}{Self-supervised learning for barcode DNA classification.}{Co-supervised with Prof.~\LilaKari{}}
 \cventry{since 2024}{Niousha Sadjadi}{Ph.D. in Computer Science}{University of Waterloo}{Self-supervised learning for barcode DNA classification.}{Co-supervised with Prof.~\LilaKari{}}
-\cventry{2023 -- 2025}{John Quinto}{Master of Computer Science}{University of Guelph}{Topic: Creating instance segmentation masks for bulk images of insects.}{Co-supervised with Prof.~\GrahamTaylor{}}
-\cventry{since 2023}{Finlay Miller}{Master of Computer Science}{Dalhousie University}{Topic: Interactive symbolic music generation with smart looping.}{Co-supervised with Prof.~\SageevOore{}}
+\cventry{2023 -- 2025}{John Quinto}{Master of Applied Science}{University of Guelph}{\href{https://hdl.handle.net/10214/29484}{Thesis}: ``Advancing Automated Biodiversity Monitoring: A Deep Learning Framework for Bulk Arthropod Samples''.}{Co-supervised with Prof.~\GrahamTaylor{}}
+\cventry{2023 -- 2026}{Finlay Miller}{Master of Computer Science}{Dalhousie University}{Topic: Interactive symbolic music generation with smart looping.}{Co-supervised with Prof.~\SageevOore{}}
 \cventry{2023 -- 2024}{Pablo Millán Arias}{Ph.D. in Computer Science}{University of Waterloo}{\href{https://uwspace.uwaterloo.ca/bitstream/handle/10012/20581/MillanArias_Pablo.pdf?sequence=5}{Thesis}: ``Deep Unsupervised Learning for Biodiversity Analyses''.}{Co-supervised with Prof.~\LilaKari{}}
 \cventry{2021 -- 2022}{Amit Baroi}{Master of Resource \& Environmental Management}{Dalhousie University}{and DeepSense Data Science Intern, Topic: Building a global benthic habitat imagery dataset.}{Co-supervised with Prof.~\ThomasTrappenberg{}}
 \cventry{2020 -- 2022}{Isaac Xu}{Master of Computer Science}{Dalhousie University}{\href{http://hdl.handle.net/10222/81773}{Thesis}: ``Towards a label-free and representation-based metric for evaluating machine learning models''.}{Co-supervised with Prof.~\ThomasTrappenberg{}}
@@ -642,174 +785,116 @@ Advisor: Prof. \NathalieRochefort{}.
 %	GRANTS, HONORS AND AWARDS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Grants, honours \& awards}
+\section{Teaching}
 
-\cvitem{2026}{
-\emoji{2nd-place-medal}
-Placed 2nd out of 56 in \href{https://www.codabench.org/competitions/16815/\#/results-tab}{Fish Species Recognition Challenge } competition, 3rd Workshop on Computer Vision for Ecology, The 19th European Conference on Computer Vision (ECCV 2026).
-}
+\cvitem{since 2018}{Supervision and collaboration across institutions: co-supervising students since 2018, first in Halifax and now remotely from Toronto with students in Toronto, Vancouver, Guelph, Waterloo, and Halifax; collaborating with research groups in Denmark, Sweden, and Finland, largely online.}
+\cvitem{2024}{Lecturer, \textit{Self-Supervised Learning Methodology}, Self-Supervised Learning Bootcamp for industry partners, Vector Institute, Toronto, Canada.}
+\cvitem{2023}{Lecturer, \textit{Single-modal self-supervised learning methods \& background}, Self-Supervised Learning Bootcamp for industry partners, Vector Institute, Toronto, Canada.}
+\cvitem{2023}{Two-hour tutorial, \textit{Self-supervised learning methods}, Self-Supervised Learning Reading Group, Vector Institute, Toronto, Canada.}
+\cvitem{2019}{Guest lectures on probabilistic modelling and reasoning, Faculty of Computer Science, Dalhousie University, Halifax, Canada.}
+\cvitem{2013}{Tutor, \textit{Neural Computation} (MSc), School of Informatics, University of Edinburgh, UK.}
 
-\cvitem{2026}{
-\emoji{dollar-banknote}
-Vector Institute Tidewater compute and funding competition (project lead). Project: ``Masked Self-Distillation of Hidden Layers for Multimodal Representation Learning''. 15,000 GPU-hours and CAD 20,000 trainee funding.
-}
+\section{Professional service}
 
-\cvitem{2026}{
-\emoji{desktop-computer}
-Awarded Lambda Research Grant. \textit{Total value: USD\,2,000.}
-}
-
-\cvitem{2022}{
-\emoji{dollar-banknote}
-Awarded Mitacs Accelerate grant IT27877: Artificial intelligence driven monitoring and prediction of true sleep health on CPAP machines to improve patient care and reduce the harm of obstructive sleep apnea. \textit{Total value: CAD\,180,000.}
-}
-
-\cvitem{2021}{
-\emoji{dollar-banknote}
-Compute Canada Resources for Research Groups (RRG) competition, 2021. Project: ``Global Benthic Habitats''. \textit{Value: CAD\,20,059.}
-}
-
-\cvitem{2020}{
-\emoji{dollar-banknote}
-Awarded Mitacs Accelerate grant IT19053: Monitoring and Analysis of COVID-19 Acute Respiratory Distress Syndrome on Ventilators. \textit{Total value: CAD\,210,000}.
-}
-
-\cvitem{2019}{
-\emoji{dollar-banknote}
-Awarded Mitacs Accelerate grant IT16140: Active Learning for Fish School Recognition in Echograms in the Bay of Fundy. \textit{Value: CAD\,15,000.}
-}
-
-\cvitem{2018}{
-\emoji{desktop-computer}
-Awarded an NVIDIA GPU Grant (Titan~V).
-}
-
-\cvitem{2017}{
-\emoji{1st-place-medal}
-Placed 8th out of 91 in \href{https://www.kaggle.com/c/nips-2017-non-targeted-adversarial-attack}{NIPS 2017: Non-targeted Adversarial Attack} competition, NIPS2017 Conference Competition Track, organised by Google Brain and Kaggle.
-}
-
-\cvitem{2016}{
-Awarded a entrepreneurial fellowship with \href{https://joinef.com}{Entrepreneur First}, London.
-}
-
-\cvitem{2015}{
-\emoji{3rd-place-medal}
-Placed 57th out of 1049 in the \href{https://www.kaggle.com/c/datasciencebowl}{National Data Science Bowl} plankton species classification challenge, hosted by Kaggle.
-}
-
-\cvitem{2014}{
-\emoji{2nd-place-medal}
-Placed 16th out of 504 in the \href{https://www.kaggle.com/c/seizure-prediction}{American Epilepsy Society Seizure Prediction Challenge}, hosted by Kaggle.
-}
-
-\cvitem{2013}{
-\emoji{trophy}
-Winner of ``Most Viable Business Idea'' award, \href{http://www.meetup.com/Amazon-UK-Hackathon-Group/events/108265382/}{Amazon Scotland Hackathon 2013}.
-}
-
-\cvitem{2011}{
-\emoji{pound-banknote}
-Awarded a 4-year scholarship by the University of Edinburgh School of Informatics Doctoral Training Centre in Neuroinformatics, with funding from grants EP/F500385/1 and  BB/F529254/1 from the UK Engineering and Physical Sciences Research Council (EPSRC), UK Biotechnology and Biological Sciences Research Council (BBSRC), and the UK Medical Research Council (MRC).
-}
-
-%\cvitem{2007}{
-%Awarded the Sandbach School \textit{Boarders Trophy for Excellence in Mathematics}.
-%}
+\cvitem{2026}{Area Chair for \emph{The Fifteenth International Conference on Learning Representations (ICLR 2027).}}{}{}{}{}{}
+\cvitem{2026}{Workshop organizer for ``\href{https://bioscan-ml.org/ibol-workshop/}{AI for Biodiversity Research: Multimodal Methods for Taxonomic Discovery}'' at the \emph{\href{https://dnabarcodingconference.com/program/workshops/}{iBOL 2026 conference}.}}{}{}{}{}{}
+\cvitem{2026}{Reviewer for the \emph{Fortieth Conference on Neural Information Processing Systems (NeurIPS 2026).}}{}{}{}{}{}
+\cvitem{2026}{\href{https://eccv.ecva.net/Conferences/2026/ProgramCommittee\#outstanding-reviewer:~:text=Scott\%20Lowe}{Outstanding reviewer} for \emph{The 19th European Conference on Computer Vision 2026 (ECCV 2026).}}{}{}{}{}{}
+\cvitem{2026}{\href{https://cvpr.thecvf.com/Conferences/2026/ProgramCommittee\#outstanding-reviewer:~:text=Scott\%20Lowe}{Outstanding reviewer} for \emph{The IEEE/CVF Conference on Computer Vision and Pattern Recognition 2026 (CVPR 2026).}}{}{}{}{}{}
+\cvitem{2025}{\href{https://iclr.cc/Conferences/2026/ProgramCommittee\#reviewer:~:text=Scott\%20C.\%20Lowe}{Reviewer} for \emph{The Fourteenth International Conference on Learning Representations (ICLR 2026).}}{}{}{}{}{}
+\cvitem{2025}{\href{https://wacv.thecvf.com/Conferences/2026/ProgramCommittee\#reviewer:~:text=Scott\%20Lowe}{Reviewer} for \emph{The IEEE/CVF Winter Conference on Applications of Computer Vision 2026 (WACV 2026).}}{}{}{}{}{}
+\cvitem{2025}{\href{https://neurips.cc/Conferences/2025/ProgramCommittee\#all-reviewer:~:text=Scott\%20C\%20Lowe}{Reviewer} for \emph{Thirty-ninth Conference on Neural Information Processing Systems (NeurIPS 2025).}}{}{}{}{}{}
+\cvitem{2025}{\href{https://icml.cc/Conferences/2025/ProgramCommittee\#all-reviewer:~:text=Scott\%20Lowe}{Reviewer} for \emph{The 42nd International Conference on Machine Learning (ICML 2025).}}{}{}{}{}{}
+\cvitem{2024}{\href{https://iclr.cc/Conferences/2025/ProgramCommittee\#all-reviewer:~:text=Scott\%20Lowe}{Reviewer} for \emph{The Thirteenth International Conference on Learning Representations (ICLR 2025).}}{}{}{}{}{}
+\cvitem{2024}{\href{https://neurips.cc/Conferences/2024/ProgramCommittee\#all-reviewers:~:text=Scott\%20C\%2E\%20Lowe}{Reviewer} for \emph{Thirty-eighth Conference on Neural Information Processing Systems (NeurIPS 2024).}}{}{}{}{}{}
+\cvitem{2022 -- 2024}{Vector Institute's \emph{Self-Supervised Learning and Foundation Models} Reading Group Organizer.}{}{}{}{}{}
+\cvitem{2023}{\href{https://neurips.cc/Conferences/2023/ProgramCommittee\#top-reivewers:~:text=Scott\%20C\%20Lowe}{Reviewer} for \emph{Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS 2023).}}{}{}{}{}{}
+\cvitem{2021}{\href{https://elifesciences.org/articles/62949/peer-reviews\#content}{Reviewer} for eLife.}{}{}{}{}{}
 
 
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\clearpage
+%----------------------------------------------------------------------------------------
+%\clearpage
 \section{Invited talks}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \cvitem{Jun, 2026}{
-  \textbf{Scott C. Lowe}.
+  \textbf{Scott~C.~Lowe}.
   % (2026, June).
   ``Bootleg: Self-Distillation of Hidden Layers for Self-Supervised Representation Learning''
   Invited talk at the \href{https://www.ru.nl/en/donders-institute}{Donders Institute for Brain, Cognition, and Behaviour}, Radbound Universiteit, Nijmegen, Netherlands.
 }
 
 \cvitem{Feb, 2025}{
-  \textbf{Scott C. Lowe}.
-  % (2025, February).
-  ``BIOSCAN-5M: A Multimodal Dataset for Insect Biodiversity''
-  Invited talk at the \href{https://voxel51.com/}{Voxel51} \textit{AI, Machine Learning and Computer Vision Meetup}.
-  [\href{https://voxel51.com/computer-vision-events/ai-machine-learning-computer-vision-meetup-feb-20-2025/}{abstract}],
-  [\href{https://www.youtube.com/watch?v=_JFw4ntJhLg}{recording}].
-}
-
-\cvitem{Feb, 2025}{
-  \textbf{Scott C. Lowe}.
+  \textbf{Scott~C.~Lowe}.
   % (2025, February).
   ``BIOSCAN-5M: Multimodal biodiversity monitoring with images and DNA barcodes''.
   Invited talk at the \href{https://gruvi.cs.sfu.ca/}{GrUVi Lab}, Simon Fraser University, Vancouver, Canada.
 }
 
 \cvitem{Nov, 2024}{
-  \textbf{Scott C. Lowe}.
+  \textbf{Scott~C.~Lowe}.
   % (2024, November).
   ``Multimodal biodiversity monitoring with images and DNA barcodes''.
   Invited talk at the \href{https://vbn.aau.dk/da/organisations/visual-analysis-and-perception}{Visual Analysis and Perception Group}, Aalborg University, Aalborg, Denmark.
 }
 
 \cvitem{Nov, 2024}{
-  \textbf{Scott C. Lowe}.
+  \textbf{Scott~C.~Lowe}.
   % (2024, November).
   ``Multimodal biodiversity monitoring with images and DNA barcodes''
   Invited talk at the \href{https://www.aicentre.dk/}{Pioneer Centre for Artificial Intelligence}, Copenhagen, Denmark.
   [\href{https://www.aicentre.dk/events/talk-on-multimodal-biodiversity-monitoring-with-images-and-dna-barcodes}{abstract}].
 }
 
-\cvitem{Apr, 2024}{
-  \textbf{Scott C. Lowe}.
-  % (2024, April).
-  ``Self-Supervised Learning Methodology''.
-  Presented at the \textit{Self-Supervised Learning Bootcamp}, Vector Institute, Toronto, Canada, 2024.
-}
+% \cvitem{Apr, 2024}{
+%   \textbf{Scott~C.~Lowe}.
+%   % (2024, April).
+%   ``Self-Supervised Learning Methodology''.
+%   Presented at the \textit{Self-Supervised Learning Bootcamp}, Vector Institute, Toronto, Canada, 2024.
+% }
 
-\cvitem{Sep, 2023}{
-  \textbf{Scott C. Lowe}.
-  % (2023, September).
-  ``Single-modal self-supervised learning methods \& background''.
-  Presented at the \textit{Self-Supervised Learning Bootcamp}, Vector Institute, Toronto, Canada, 2023.
-}
+% \cvitem{Sep, 2023}{
+%   \textbf{Scott~C.~Lowe}.
+%   % (2023, September).
+%   ``Single-modal self-supervised learning methods \& background''.
+%   Presented at the \textit{Self-Supervised Learning Bootcamp}, Vector Institute, Toronto, Canada, 2023.
+% }
 
-\cvitem{Feb, 2023}{
-  \textbf{Scott C. Lowe}.
-  % (2023, February).
-  ``Tutorial: Self-supervised learning methods''.
-  Presented at the \textit{Self-Supervised Learning Reading Group}, Vector Institute, Toronto, Canada, 2023.
-}
+% \cvitem{Feb, 2023}{
+%   \textbf{Scott~C.~Lowe}.
+%   % (2023, February).
+%   ``Tutorial: Self-supervised learning methods''.
+%   Presented at the \textit{Self-Supervised Learning Reading Group}, Vector Institute, Toronto, Canada, 2023.
+% }
 
 \cvitem{Jul, 2022}{
-  \textbf{Scott C. Lowe}, Robert Earle, Jason d'Eon, Thomas Trappenberg, Sageev Oore.
+  \textbf{Scott~C.~Lowe}, Robert Earle, Jason d'Eon, Thomas Trappenberg, Sageev Oore.
   % (2022, July).
   ``Logical Activation Functions'' (Spotlight talk).
   Presented at the \textit{\href{https://icml.cc/virtual/2022/workshop/13474}{Beyond Bayes: Paths Towards Universal Reasoning Systems Workshop}, 39th International Conference on Machine Learning (ICML 2022)}, Baltimore, Maryland, USA, 2022.
 }
 
 \cvitem{May, 2015}{
-  \textbf{Scott C. Lowe}, Daniel Zaldivar, Yusuke Murayama, Mark C. W. van Rossum, Nikos K. Logothetis, Stefano Panzeri.
+  \textbf{Scott~C.~Lowe}, Daniel Zaldivar, Yusuke Murayama, Mark C. W. van Rossum, Nikos K. Logothetis, Stefano Panzeri.
   % (2015, May).
   ``What does LFP encode?''.
   {Presented at the \emph{CINPLA Workshop: ``Inferring network activity from LFPs''}, University of Oslo, Oslo, Norway.}
 }
 
 \cvitem{Jan, 2014}{
-  \textbf{Scott C. Lowe}, Daniel Zaldivar, Yusuke Murayama, Mark C. W. van Rossum, Nikos K. Logothetis, Stefano Panzeri.
+  \textbf{Scott~C.~Lowe}, Daniel Zaldivar, Yusuke Murayama, Mark C. W. van Rossum, Nikos K. Logothetis, Stefano Panzeri.
   % (2014, January).
   ``Independent channels of information in visual cortical Local Field Potentials''.
   {Presented at the \emph{Institute for Adaptive and Neural Computation Workshop, Jan 14, 2014}, Edinburgh.}
 }
 
-\clearpage
+%\clearpage
 \begin{comment}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Workshop/Poster Presentations}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-% Hamed Hanafi, Matthew Hickey, Kazi Antor Hasan, Najmeh Sadatnejad, Guillermo Aristi, Meagan Sinclair, Gregory Begin, Megan Neil, Sarah Henley, Steve Driscoll, Scott Lowe, Ingo Fietze, Thomas Penzel, Reena Mehra, Yuksel Peker, Sanja Jelic, Debra Morrison
+% Hamed Hanafi, Matthew Hickey, Kazi Antor Hasan, Najmeh Sadatnejad, Guillermo Aristi, Meagan Sinclair, Gregory Begin, Megan Neil, Sarah Henley, Steve Driscoll, Scott~Lowe, Ingo Fietze, Thomas Penzel, Reena Mehra, Yuksel Peker, Sanja Jelic, Debra Morrison
 \cvitem{Sep, 2025}{
   H~Hanafi, M~Hickey, KA~Hasan, N~Sadatnejad, G~Aristi, M~Sinclair, G~Begin, M~Neil, S~Henley, S~Driscoll, S~Lowe, I~Fietze, T~Penzel, R~Mehra, Y~Peker, S~Jelic, D~Morrison.
   ``Enhanced PAP adherence using cMAP® for sleep apnea therapy vs. APAP: A preliminary 3-month analysis''.
@@ -817,7 +902,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   \doi{10.1183/13993003.congress-2025.PA6030}.
 }
 
-% Hamed Hanafi, Matthew Hickey, Kazi Antor Hasan, Steve Driscoll, Scott Lowe, Maryam Elsankary, Ingo Fietze, Thomas Penzel, Reena Mehra, Sanja Jelic, Yuksel Peker, Debra Morrison 
+% Hamed Hanafi, Matthew Hickey, Kazi Antor Hasan, Steve Driscoll, Scott~Lowe, Maryam Elsankary, Ingo Fietze, Thomas Penzel, Reena Mehra, Sanja Jelic, Yuksel Peker, Debra Morrison
 \cvitem{Sep, 2025}{
   H~Hanafi, M~Hickey, KA~Hasan, S~Driscoll, S~Lowe, M~Elsankary, I~Fietze, T~Penzel, R~Mehra, S~Jelic, Y~Peker, D~Morrison.
   ``Identification of Obstructive Apnea Signatures Result in Phenotypes with Distinct Biometric Differences''
@@ -832,7 +917,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   \doi{10.1164/ajrccm.2025.211.Abstracts.A6920}.
 }
 
-% Monireh Safari*, Pablo Millan Arias*, \textbf{Scott C. Lowe}, Lila Kari, Angel X. Chang, Graham W. Taylor.
+% Monireh Safari*, Pablo Millan Arias*, \textbf{Scott~C.~Lowe}, Lila Kari, Angel X. Chang, Graham W. Taylor.
 \cvitem{Apr, 2025}{
   M Safari*, P Millan Arias*, \textbf{SC Lowe}, L Kari, AX Chang, GW Taylor.
   % (2025, February).
@@ -841,7 +926,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   [\href{https://openreview.net/forum?id=Kx3tpVG4M7}{OpenReview}]
 }
 
-% Monireh Safari*, Pablo Millan Arias*, \textbf{Scott C. Lowe}, Lila Kari, Angel X. Chang, Graham W. Taylor.
+% Monireh Safari*, Pablo Millan Arias*, \textbf{Scott~C.~Lowe}, Lila Kari, Angel X. Chang, Graham W. Taylor.
 \cvitem{Apr, 2025}{
   M Safari*, P Millan Arias*, \textbf{SC Lowe}, L Kari, AX Chang, GW Taylor.
   % (2025, February).
@@ -850,7 +935,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   [\href{https://openreview.net/forum?id=DGs7lmqkkU}{OpenReview}]
 }
 
-% Angus Galloway, Peter C. Esselman, David M. Warner, Timothy P. O’Brien, Hannah B. Blair, Lars G. Rudstam, Suresh A. Sethi, Jeremy Holden, Scott C. Lowe
+% Angus Galloway, Peter C. Esselman, David M. Warner, Timothy P. O’Brien, Hannah B. Blair, Lars G. Rudstam, Suresh A. Sethi, Jeremy Holden, Scott~C.~Lowe
 \cvitem{Apr, 2025}{
   A Galloway, PC Esselman, DM Warner, TP O'Brien, HB Blair, LG Rudstam, SA Sethi, J Holden, \textbf{SC Lowe}.
   ``Echofilter 2.0: The echogram event horizon''.
@@ -858,7 +943,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   [\href{https://wgfast.hafro.is/pdfs/ICES\%20WGFAST_book_of_abstracts\%202025.pdf}{Abstract}]
 }
 
-% \textbf{Scott C. Lowe}*, Joakim Bruslund Haurum*, Sageev Oore$^\dagger$, Thomas B. Moeslund$^\dagger$, Graham W. Taylor$^\dagger$,
+% \textbf{Scott~C.~Lowe}*, Joakim Bruslund Haurum*, Sageev Oore$^\dagger$, Thomas B. Moeslund$^\dagger$, Graham W. Taylor$^\dagger$,
 \cvitem{Jul, 2024}{
   \textbf{SC Lowe}*, J Bruslund Haurum*, S Oore$^\dagger$, TB Moeslund$^\dagger$, GW Taylor$^\dagger$.
   % (2024, July).
@@ -867,7 +952,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   [\href{https://openreview.net/forum?id=kcgf3istoO}{OpenReview}]
 }
 
-% ZeMing Gong, Austin T. Wang, Joakim Bruslund Haurum, \textbf{Scott C. Lowe}, Graham W. Taylor, Angel X. Chang
+% ZeMing Gong, Austin T. Wang, Joakim Bruslund Haurum, \textbf{Scott~C.~Lowe}, Graham W. Taylor, Angel X. Chang
 \cvitem{Jun, 2024}{
   Z Gong, AT Wang, J Bruslund Haurum, \textbf{SC Lowe}, GW Taylor, AX Chang.
   % (2024, June).
@@ -876,7 +961,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   [\href{https://drive.google.com/file/d/1S4B9eaUmPPJec7pENFov3_RjryQh-GdX/view?usp=drive_link}{PDF}]
 }
 
-% ZeMing Gong, Austin T. Wang, Joakim Bruslund Haurum, \textbf{Scott C. Lowe}, Graham W. Taylor, Angel X. Chang
+% ZeMing Gong, Austin T. Wang, Joakim Bruslund Haurum, \textbf{Scott~C.~Lowe}, Graham W. Taylor, Angel X. Chang
 \cvitem{May, 2024}{
   Z Gong, AT Wang, J Bruslund Haurum, \textbf{SC Lowe}, GW Taylor, AX Chang.
   % (2024, May).
@@ -886,7 +971,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   \textbf{Selected for oral presentation}.
 }
 
-% \textbf{Scott C. Lowe}*, Joakim Bruslund Haurum*, Sageev Oore$^\dagger$, Thomas B. Moeslund$^\dagger$, Graham W. Taylor$^\dagger$,
+% \textbf{Scott~C.~Lowe}*, Joakim Bruslund Haurum*, Sageev Oore$^\dagger$, Thomas B. Moeslund$^\dagger$, Graham W. Taylor$^\dagger$,
 \cvitem{Mar, 2024}{
   \textbf{SC Lowe}*, J Bruslund Haurum*, S Oore$^\dagger$, TB Moeslund$^\dagger$, GW Taylor$^\dagger$.
   % (2024, March).
@@ -894,7 +979,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   Presented at the \textit{\href{https://vectorinstitute.ai/vector-institute-computer-vision-workshop-showcases-the-fields-current-capabilities-and-future-potential/}{Vector Institute Computer Vision Workshop}}, Toronto, Canada.
 }
 
-% \textbf{Scott C. Lowe}*, Joakim Bruslund Haurum*, Sageev Oore$^\dagger$, Thomas B. Moeslund$^\dagger$, Graham W. Taylor$^\dagger$,
+% \textbf{Scott~C.~Lowe}*, Joakim Bruslund Haurum*, Sageev Oore$^\dagger$, Thomas B. Moeslund$^\dagger$, Graham W. Taylor$^\dagger$,
 \cvitem{Dec, 2023}{
   \textbf{SC Lowe}*, J Bruslund Haurum*, S Oore$^\dagger$, TB Moeslund$^\dagger$, GW Taylor$^\dagger$.
   % (2023, December).
@@ -903,7 +988,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   [\href{https://openreview.net/forum?id=2gytoWpJGf}{OpenReview}]
 }
 
-% Pablo Millan Arias*, Niousha Sadjadi*, Monireh Safari*, ZeMing Gong, Austin Wang, \textbf{Scott Lowe}, Joakim Haurum, Iuliia Zarubiieva, Dirk Steinke, Lila Kari, Angel Chang, Graham Taylor.
+% Pablo Millan Arias*, Niousha Sadjadi*, Monireh Safari*, ZeMing Gong, Austin Wang, \textbf{Scott~Lowe}, Joakim Haurum, Iuliia Zarubiieva, Dirk Steinke, Lila Kari, Angel Chang, Graham Taylor.
 \cvitem{Dec, 2023}{
   P Millan Arias*, N Sadjadi*, M Safari*, Z Gong, A. Wang, \textbf{S Lowe}, J Haurum, I Zarubiieva, D Steinke, L Kari, A Chang, G Taylor.
   % (2023, December).
@@ -913,7 +998,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   [\href{https://openreview.net/forum?id=0nRednHa2h}{OpenReview}]
 }
 
-% \textbf{Scott C. Lowe}*, Joakim Bruslund Haurum*, Sageev Oore$^\dagger$, Thomas B. Moeslund$^\dagger$, Graham W. Taylor$^\dagger$,
+% \textbf{Scott~C.~Lowe}*, Joakim Bruslund Haurum*, Sageev Oore$^\dagger$, Thomas B. Moeslund$^\dagger$, Graham W. Taylor$^\dagger$,
 \cvitem{Dec, 2023}{
   \textbf{SC Lowe}*, J Bruslund Haurum*, S Oore$^\dagger$, TB Moeslund$^\dagger$, GW Taylor$^\dagger$.
   % (2023, December).
@@ -923,7 +1008,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   [\href{https://openreview.net/forum?id=3qGnSze3M7}{OpenReview}]
 }
 
-% Isaac Xu, \textbf{Scott C. Lowe}, Thomas Trappenberg.
+% Isaac Xu, \textbf{Scott~C.~Lowe}, Thomas Trappenberg.
 \cvitem{Sep, 2022}{
   I Xu, \textbf{SC Lowe}, T Trappenberg.
   % (2022, September).
@@ -931,7 +1016,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   Presented at the \textit{2022 IEEE Canadian Conference on Electrical and Computer Engineering (CCECE 2022)}, Halifax, Nova Scotia, Canada.
 }
 
-% \textbf{Scott C. Lowe}, Robert Earle, Jason d'Eon, Thomas Trappenberg, Sageev Oore.
+% \textbf{Scott~C.~Lowe}, Robert Earle, Jason d'Eon, Thomas Trappenberg, Sageev Oore.
 \cvitem{Jul, 2022}{
   \textbf{SC Lowe}, R Earle, J d'Eon, T Trappenberg, S Oore.
   % (2022, July).
@@ -942,48 +1027,48 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
 }
 
 \cvitem{May, 2022}{
-  Craig J. Brown, Ben Misiuk, Ben DiTrolio, Thomas Trappenburg, \textbf{Scott C. Lowe}, Katleen Robert.
+  Craig J. Brown, Ben Misiuk, Ben DiTrolio, Thomas Trappenburg, \textbf{Scott~C.~Lowe}, Katleen Robert.
   % (2022, May).
   ``Benthic Ecosystem Mapping For Sustainable Ocean Stewardship In A Shifting Ocean Climate''.
   Presented at \emph{\href{https://geohab.org/wp-content/uploads/2022/05/Abstract_Volume_GEOHAB2022.pdf}{Geohab 2022}}, Venice, Italy.
 }
 
 \cvitem{May, 2022}{
-  Ben Misiuk, Craig J. Brown, Vicki Ferrini, \textbf{Scott C. Lowe}, Thomas Trappenburg.
+  Ben Misiuk, Craig J. Brown, Vicki Ferrini, \textbf{Scott~C.~Lowe}, Thomas Trappenburg.
   % (2022, May).
   ``Comparing Manual And Automated Feature Engineering Approaches For Mapping Seabed Sediments In The Bay Of Fundy, Canada''.
   Presented at \emph{\href{https://geohab.org/wp-content/uploads/2022/05/Abstract_Volume_GEOHAB2022.pdf}{Geohab 2022}}, Venice, Italy.
 }
 
 \cvitem{Feb, 2022}{
-  Louise P. McGarry, \textbf{Scott C. Lowe}, Jessica Douglas, Jason Newport, Sageev Oore, Christopher Whidden, and Daniel J. Hasselman.
+  Louise P. McGarry, \textbf{Scott~C.~Lowe}, Jessica Douglas, Jason Newport, Sageev Oore, Christopher Whidden, and Daniel J. Hasselman.
   % (2022, February).
   ``Echofilter: A Deep Learning Segmentation Model Improves The Automation, Standardization, And Timeliness For Post-Processing And Reporting Echosounder Data In Tidal Energy Streams''.
   Presented at \emph{Ocean Sciences 2022 (\href{https://www.aslo.org/osm2022/}{OSM 2022})}, Virtual.
 }
 
 \cvitem{Jul, 2021}{
-  Isaac Xu, Thomas Trappenberg, \textbf{Scott C. Lowe}.
+  Isaac Xu, Thomas Trappenberg, \textbf{Scott~C.~Lowe}.
   % (2021, July).
   ``Toward Semi-Supervised Classification of Underwater Benthic Habitat Imagery''.
   Presented at \emph{Dalhousie Computer Science In-House Conference (\href{https://dcsi.cs.dal.ca/?page_id=85}{DCSI})}, Dalhousie University, Halifax, Canada.
 }
 
 \cvitem{Jul, 2021}{
-  Shakhboz Abdulazizov, Thomas Trappenberg, \textbf{Scott C. Lowe}.
+  Shakhboz Abdulazizov, Thomas Trappenberg, \textbf{Scott~C.~Lowe}.
   % (2021, July).
   ``An Autoencoder Model of Bathymetry and Multibeam Echosound Backscatter''.
   Presented at \emph{Dalhousie Computer Science In-House Conference (\href{https://dcsi.cs.dal.ca/?page_id=85}{DCSI})}, Dalhousie University, Halifax, Canada.
 }
 
 \cvitem{Jun, 2021}{
-  Chris Whidden, Jason Newport, \textbf{Scott C. Lowe}.
+  Chris Whidden, Jason Newport, \textbf{Scott~C.~Lowe}.
   % (2021, June).
   ``Automating the post-processing of noisy hydroacoustic fish surveying for monitoring tidal turbines''.
   {Presented at \emph{International Conference on Ocean Energy}, Madrid, Spain (Virtual).}
 }
 
-% \textbf{Scott C. Lowe}, Robert Earle, Thomas Trappenberg, Sageev Oore.
+% \textbf{Scott~C.~Lowe}, Robert Earle, Thomas Trappenberg, Sageev Oore.
 \cvitem{Nov, 2020}{
   \textbf{SC Lowe}, R Earle, T Trappenberg, S Oore.
   % (2020, November).
@@ -991,7 +1076,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   Presented at \emph{From Neuroscience to Artificially Intelligent Systems (\href{https://meetings.cshl.edu/abstracts.aspx?meet=naisys&year=20}{NAISys})}, Cold Spring Harbor Laboratory, NY, USA.
 }
 
-% \textbf{Scott C. Lowe}, Thomas Trappenberg, Sageev Oore.
+% \textbf{Scott~C.~Lowe}, Thomas Trappenberg, Sageev Oore.
 \cvitem{Oct, 2019}{
   \textbf{SC Lowe}, T Trappenberg, S Oore.
   % (2019, October).
@@ -1000,14 +1085,14 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
 }
 
 \cvitem{Oct, 2019}{
-  Nicholas Barreyre*, Nicholas Meade*, Sageev Oore, Vlado Keselj, \textbf{Scott C. Lowe}.
+  Nicholas Barreyre*, Nicholas Meade*, Sageev Oore, Vlado Keselj, \textbf{Scott~C.~Lowe}.
   % (2019, October).
   ``Bitwise Conditional Controls Over Language Models for Music and Text''.
   {Presented at the \emph{2019 Science Atlantic Conference for Mathematics, Statistics and Computer Science}, Dalhousie University, Halifax, Canada.}
   {\textbf{Awarded third place}.}
 }
 
-% Sofia I. R. Pereira, Natalie Gunasekara, \textbf{Scott C. Lowe}, Mark van Rossum, Penelope A. Lewis.
+% Sofia I. R. Pereira, Natalie Gunasekara, \textbf{Scott~C.~Lowe}, Mark van Rossum, Penelope A. Lewis.
 \cvitem{Mar, 2019}{
   SIR Pereira, N Gunasekara, \textbf{SC Lowe}, MCW van Rossum, PA Lewis.
   % (2019, March).
@@ -1015,7 +1100,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   Presented at the \emph{26th Annual Meeting of the Cognitive Neuroscience Society}, San Francisco, USA.
 }
 
-% Sofia I. R. Pereira, Natalie Gunasekara, \textbf{Scott C. Lowe}, Mark van Rossum, Penelope A. Lewis.
+% Sofia I. R. Pereira, Natalie Gunasekara, \textbf{Scott~C.~Lowe}, Mark van Rossum, Penelope A. Lewis.
 \cvitem{Mar, 2019}{
   SIR Pereira, N Gunasekara, \textbf{SC Lowe}, MCW van Rossum, PA Lewis.
   % (2019, March).
@@ -1047,7 +1132,7 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
   Presented at the \emph{The Brain in Focus: New Approaches to Imaging Neurons and Neural Circuits}, Copenhagen, Denmark.
 }
 
-% Sander W. Keemink, Janelle M.P. Pakan, \textbf{Scott C. Lowe}, Evelyn Dylda, Mark C.W. van Rossum, Nathalie L. Rochefort. EVCM
+% Sander W. Keemink, Janelle M.P. Pakan, \textbf{Scott~C.~Lowe}, Evelyn Dylda, Mark C.W. van Rossum, Nathalie L. Rochefort. EVCM
 \cvitem{Sep, 2016}{
   SW Keemink, JMP Pakan, \textbf{SC Lowe}, E Dylda, MCW van Rossum, NL Rochefort.
   % (2016, September).
@@ -1102,83 +1187,63 @@ Awarded a 4-year scholarship by the University of Edinburgh School of Informatic
 \end{comment}
 
 %----------------------------------------------------------------------------------------
+%\clearpage
+\section{Honours \& awards}
 
-\section{Technical Skills}
-
-\cvitem{Programming}{Python, MATLAB, Bash/shell, regex, C/C++}
-\cvitem{ML}{PyTorch, TensorFlow, PyTorch-Lightning, Scikit-learn, fastAI, Theano, Lasagne}
-\cvitem{Development}{Git, pre-commit, TDD, CI/CD, GHA}
-\cvitem{Job Scheduler}{Slurm, LSF}
-\cvitem{Cloud comp.}{AWS, GCP}
-\cvitem{Web}{PHP, JavaScript, AJAX, HTML5, CSS3}
-\cvitem{Markup}{Markdown, rST, YAML, JSON, TOML, XML}
-\cvitem{Database}{SQL, MySQL}
-
-
-%------------------------------------------------
-\section{Open source projects}
-
-\cventry{2024}{bioscan-dataset}{PyTorch torchvision-style datasets for BIOSCAN-1M and BIOSCAN-5M}{available on \href{https://github.com/bioscan-ml/dataset}{GitHub} and \href{https://pypi.python.org/pypi/bioscan-dataset}{PyPI} (\href{https://pepy.tech/projects/bioscan-dataset}{13k downloads}).}{}{}
-
-\cventry{2024}{wandb-preempt}{Checkpointer for handling preempted Weights \& Biases sweeps on Slurm}{available on \href{https://github.com/f-dangel/wandb_preempt}{GitHub} and \href{https://pypi.python.org/pypi/wandb_preempt}{PyPI} (\href{https://pepy.tech/projects/wandb-preempt}{3k downloads}).}{}{}
-
-\cventry{2024}{PyTorch Experiment Template}{A template repository to use for pytorch projects and experiments}{available on \href{https://github.com/scottclowe/pytorch-experiment-template}{GitHub}.}{}{}
-
-\cventry{2022}{Echofilter}{Automatically segment echograms (pictures of the water column acquired with echosound) to identify entrained air, sea surface, and seafloor boundaries}{available on \href{https://github.com/DeepSenseCA/echofilter}{GitHub}.}{}{}
-
-\cventry{2020}{Python Template Repo}{A template repository to use for python projects and packages}{available on \href{https://github.com/scottclowe/python-template-repo}{GitHub}.}{}{}
-
-\cventry{2018}{FISSA}{A Python library for decontaminating somatic signals from 2-photon calcium imaging data}{available on \href{https://github.com/rochefort-lab/fissa}{GitHub} and \href{https://pypi.python.org/pypi/fissa}{PyPI} (\href{https://pepy.tech/projects/fissa}{70k downloads}).}{}{}
-
-\cventry{2016}{Superbar}{Multi-colour bar charts for MATLAB, including customisable error bars and significance comparisons}{available on \href{https://github.com/scottclowe/superbar/}{GitHub}, and \href{http://mathworks.com/matlabcentral/fileexchange/57499-superbar}{MATLAB FileExchange} (3k downloads).}{}{}
-
-\cventry{2016}{MOPI: MATLAB/Octave Package Installer}{A simple and flexible package manager for both MATLAB and Octave}{available on \href{https://github.com/mopify/mopi}{GitHub}.}{}{}
-
-\cventry{2015}{MATLAB Schemer}{A colour scheme manager for MATLAB}{available on \href{https://github.com/scottclowe/matlab-schemer}{GitHub}, and through \href{http://mathworks.com/matlabcentral/fileexchange/53862-matlab-schemer}{MATLAB FileExchange} (135k downloads).}{}{}
-
-\cventry{2013}{Colorlab}{Perceptually uniform colormap generation}{available on \href{https://github.com/scottclowe/colorlab}{GitHub}.}{}{}
-
-%----------------------------------------------------------------------------------------
-\clearpage
-\section{Patents}
-
-\cvitem{2024}{
-Hamed Hanafialamdari, \textbf{Scott C. Lowe}, Guillermo A. Suarez, Gregory E. A. Begin, Brendan I. L. Brady, Sarah E. Reeve, Meagan M. Sinclair, Joel Liederman, Seyedehnajmeh Sadatnejad, Kazi A. Hasan, Rajwant S. Sodhi. (Novaresp Technologies Inc),
-``Digital twin and artificial intelligence (AI) models for personalization and management of breathing assistance ''.
-\href{https://patents.google.com/patent/WO2024192512A1/}{WO2024192512A1} and \href{https://patents.google.com/patent/US20260014336A1/}{US20260014336A1}.
+\cvitem{2026}{
+%\emoji{2nd-place-medal}
+Placed 2nd out of 56 in \href{https://www.codabench.org/competitions/16815/\#/results-tab}{Fish Species Recognition Challenge } competition, 3rd Workshop on Computer Vision for Ecology, The 19th European Conference on Computer Vision (ECCV 2026).
 }
 
-\cvitem{2023}{
-Hamed Hanafialamdari, \textbf{Scott~Lowe}, Stephen Driscoll, Luke Hacquebard, David Cecil Roach, Klaus Michael Schmidt. (Novaresp Technologies Inc),
-``Method and apparatus for determining and/or predicting sleep and respiratory behaviours for management of airway pressure''.
-\href{https://patents.google.com/patent/US11612708B2/}{US11612708B2}.
+\cvitem{2017}{
+%\emoji{1st-place-medal}
+Placed 8th out of 91 (gold medal) in \href{https://www.kaggle.com/c/nips-2017-non-targeted-adversarial-attack}{NIPS 2017: Non-targeted Adversarial Attack} competition, NIPS2017 Conference Competition Track, organised by Google Brain and Kaggle.
 }
 
-%----------------------------------------------------------------------------------------
-\section{Conference and Seminar Participation}
+\cvitem{2016}{
+Awarded a entrepreneurial fellowship with \href{https://joinef.com}{Entrepreneur First}, London.
+}
 
-\cvitem{2026}{Area Chair for \emph{The Fifteenth International Conference on Learning Representations (ICLR 2027).}}{}{}{}{}{}
-\cvitem{2026}{Workshop organizer for ``\href{https://bioscan-ml.org/ibol-workshop/}{AI for Biodiversity Research: Multimodal Methods for Taxonomic Discovery}'' at the \emph{\href{https://dnabarcodingconference.com/program/workshops/}{iBOL 2026 conference}.}}{}{}{}{}{}
-\cvitem{2026}{Reviewer for \emph{Fortieth Conference on Neural Information Processing Systems (NeurIPS 2026).}}{}{}{}{}{}
-\cvitem{2026}{\href{https://eccv.ecva.net/Conferences/2026/ProgramCommittee\#outstanding-reviewer:~:text=Scott\%20Lowe}{Outstanding reviewer} for \emph{The 19th European Conference on Computer Vision 2026 (ECCV 2026).}}{}{}{}{}{}
-\cvitem{2026}{\href{https://cvpr.thecvf.com/Conferences/2026/ProgramCommittee\#outstanding-reviewer:~:text=Scott\%20Lowe}{Outstanding reviewer} for \emph{The IEEE/CVF Conference on Computer Vision and Pattern Recognition 2026 (CVPR 2026).}}{}{}{}{}{}
-\cvitem{2025}{\href{https://iclr.cc/Conferences/2026/ProgramCommittee\#reviewer:~:text=Scott\%20C.\%20Lowe}{Reviewer} for \emph{The Fourteenth International Conference on Learning Representations (ICLR 2026).}}{}{}{}{}{}
-\cvitem{2025}{\href{https://wacv.thecvf.com/Conferences/2026/ProgramCommittee\#reviewer:~:text=Scott\%20Lowe}{Reviewer} for \emph{The IEEE/CVF Winter Conference on Applications of Computer Vision 2026 (WACV 2026).}}{}{}{}{}{}
-\cvitem{2025}{\href{https://neurips.cc/Conferences/2025/ProgramCommittee\#all-reviewer:~:text=Scott\%20C\%20Lowe}{Reviewer} for \emph{Thirty-ninth Conference on Neural Information Processing Systems (NeurIPS 2025).}}{}{}{}{}{}
-\cvitem{2025}{\href{https://icml.cc/Conferences/2025/ProgramCommittee\#all-reviewer:~:text=Scott\%20Lowe}{Reviewer} for \emph{The 42nd International Conference on Machine Learning (ICML 2025).}}{}{}{}{}{}
-\cvitem{2024}{\href{https://iclr.cc/Conferences/2025/ProgramCommittee\#all-reviewer:~:text=Scott\%20Lowe}{Reviewer} for \emph{The Thirteenth International Conference on Learning Representations (ICLR 2025).}}{}{}{}{}{}
-\cvitem{2024}{\href{https://neurips.cc/Conferences/2024/ProgramCommittee\#all-reviewers:~:text=Scott\%20C\%2E\%20Lowe}{Reviewer} for \emph{Thirty-eighth Conference on Neural Information Processing Systems (NeurIPS 2024).}}{}{}{}{}{}
-\cvitem{2022 -- 2024}{Vector Institute's \emph{Self-Supervised Learning and Foundation Models} Reading Group Organizer.}{}{}{}{}{}
-\cvitem{2023}{\href{https://neurips.cc/Conferences/2023/ProgramCommittee\#top-reivewers:~:text=Scott\%20C\%20Lowe}{Reviewer} for \emph{Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS 2023).}}{}{}{}{}{}
-\cvitem{2021}{\href{https://elifesciences.org/articles/62949/peer-reviews\#content}{Reviewer} for eLife.}{}{}{}{}{}
+\cvitem{2015}{
+%\emoji{3rd-place-medal}
+Placed 57th out of 1049 (bronze medal) in the \href{https://www.kaggle.com/c/datasciencebowl}{National Data Science Bowl} plankton species classification challenge, hosted by Kaggle.
+}
+
+\cvitem{2014}{
+%\emoji{2nd-place-medal}
+Placed 16th out of 504 (silver medal) in the \href{https://www.kaggle.com/c/seizure-prediction}{American Epilepsy Society Seizure Prediction Challenge}, hosted by Kaggle.
+}
+
+\cvitem{2013}{
+%\emoji{trophy}
+Winner of ``Most Viable Business Idea'' award, \href{http://www.meetup.com/Amazon-UK-Hackathon-Group/events/108265382/}{Amazon Scotland Hackathon 2013}.
+}
+
+\cvitem{2011}{
+%\emoji{pound-banknote}
+Awarded a 4-year scholarship by the University of Edinburgh School of Informatics Doctoral Training Centre in Neuroinformatics, with funding from grants EP/F500385/1 and  BB/F529254/1 from the UK Engineering and Physical Sciences Research Council (EPSRC), UK Biotechnology and Biological Sciences Research Council (BBSRC), and the UK Medical Research Council (MRC).
+}
+
+%\cvitem{2007}{
+%Awarded the Sandbach School \textit{Boarders Trophy for Excellence in Mathematics}.
+%}
 
 
-%----------------------------------------------------------------------------------------
-\clearpage
-\section{Media coverage}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%\clearpage
+\section{Public engagement and media}
+
+\cvitem{Feb, 2025}{
+  \textbf{Scott~C.~Lowe}.
+  % (2025, February).
+  ``BIOSCAN-5M: A Multimodal Dataset for Insect Biodiversity''
+  Invited talk at the \href{https://voxel51.com/}{Voxel51} \textit{AI, Machine Learning and Computer Vision Meetup}.
+  [\href{https://voxel51.com/computer-vision-events/ai-machine-learning-computer-vision-meetup-feb-20-2025/}{abstract}],
+  [\href{https://www.youtube.com/watch?v=_JFw4ntJhLg}{recording}].
+}
 
 \cvitem{Nov, 2021}{
-	``Dr. Scott C. Lowe'', \href{https://www.thejot.net/article-preview/?show_article_preview=1279}{Lodestar profile}, \emph{Journal of Ocean Technology}, \textbf{16}:{3}.
+	``Dr. Scott~C.~Lowe'', \href{https://www.thejot.net/article-preview/?show_article_preview=1279}{Lodestar profile}, \emph{Journal of Ocean Technology}, \textbf{16}:{3}.
 }
 
 \cvitem{Nov, 2021}{
@@ -1197,14 +1262,69 @@ Hamed Hanafialamdari, \textbf{Scott~Lowe}, Stephen Driscoll, Luke Hacquebard, Da
 % \cventry{Autumn, 2013}{Neural Computation}{Tutor}{University of Edinburgh}{}{}
 
 %----------------------------------------------------------------------------------------
+\section{Patents}
+
+\cvitem{2024}{
+Hamed Hanafialamdari, \textbf{Scott~C.~Lowe}, Guillermo A. Suarez, Gregory E. A. Begin, Brendan I. L. Brady, Sarah E. Reeve, Meagan M. Sinclair, Joel Liederman, Seyedehnajmeh Sadatnejad, Kazi A. Hasan, Rajwant S. Sodhi. (Novaresp Technologies Inc),
+``Digital twin and artificial intelligence (AI) models for personalization and management of breathing assistance ''.
+\href{https://patents.google.com/patent/WO2024192512A1/}{WO2024192512A1} and \href{https://patents.google.com/patent/US20260014336A1/}{US20260014336A1}.
+}
+
+\cvitem{2023}{
+Hamed Hanafialamdari, \textbf{Scott~Lowe}, Stephen Driscoll, Luke Hacquebard, David Cecil Roach, Klaus Michael Schmidt. (Novaresp Technologies Inc),
+``Method and apparatus for determining and/or predicting sleep and respiratory behaviours for management of airway pressure''.
+\href{https://patents.google.com/patent/US11612708B2/}{US11612708B2}.
+}
+
+%----------------------------------------------------------------------------------------
+%\clearpage
+\section{Open source projects}
+
+\cventry{2024}{bioscan-dataset}{PyTorch torchvision-style datasets for BIOSCAN-1M and BIOSCAN-5M}{available on \href{https://github.com/bioscan-ml/dataset}{GitHub} and \href{https://pypi.python.org/pypi/bioscan-dataset}{PyPI} (\href{https://pepy.tech/projects/bioscan-dataset}{15k downloads}).}{}{}
+
+\cventry{2024}{wandb-preempt}{Checkpointer for handling preempted Weights \& Biases sweeps on Slurm}{available on \href{https://github.com/f-dangel/wandb_preempt}{GitHub} and \href{https://pypi.python.org/pypi/wandb_preempt}{PyPI} (\href{https://pepy.tech/projects/wandb-preempt}{4k downloads}).}{}{}
+
+\cventry{2024}{PyTorch Experiment Template}{A template repository to use for pytorch projects and experiments}{available on \href{https://github.com/scottclowe/pytorch-experiment-template}{GitHub}.}{}{}
+
+\cventry{2022}{Echofilter}{Automatically segment echograms (pictures of the water column acquired with echosound) to identify entrained air, sea surface, and seafloor boundaries}{available on \href{https://github.com/DeepSenseCA/echofilter}{GitHub}.}{}{}
+
+\cventry{2020}{Python Template Repo}{A template repository to use for python projects and packages}{available on \href{https://github.com/scottclowe/python-template-repo}{GitHub}.}{}{}
+
+\cventry{2018}{FISSA}{A Python library for decontaminating somatic signals from 2-photon calcium imaging data}{available on \href{https://github.com/rochefort-lab/fissa}{GitHub} and \href{https://pypi.python.org/pypi/fissa}{PyPI} (\href{https://pepy.tech/projects/fissa}{71k downloads}).}{}{}
+
+\cventry{2016}{Superbar}{Multi-colour bar charts for MATLAB, including customisable error bars and significance comparisons}{available on \href{https://github.com/scottclowe/superbar/}{GitHub}, and \href{http://mathworks.com/matlabcentral/fileexchange/57499-superbar}{MATLAB FileExchange} (3k downloads).}{}{}
+
+\cventry{2016}{MOPI: MATLAB/Octave Package Installer}{A simple and flexible package manager for both MATLAB and Octave}{available on \href{https://github.com/mopify/mopi}{GitHub}.}{}{}
+
+\cventry{2015}{MATLAB Schemer}{A colour scheme manager for MATLAB}{available on \href{https://github.com/scottclowe/matlab-schemer}{GitHub}, and through \href{http://mathworks.com/matlabcentral/fileexchange/53862-matlab-schemer}{MATLAB FileExchange} (136k downloads).}{}{}
+
+\cventry{2013}{Colorlab}{Perceptually uniform colormap generation}{available on \href{https://github.com/scottclowe/colorlab}{GitHub}.}{}{}
+
+%----------------------------------------------------------------------------------------
+%\clearpage
+\section{Technical Skills}
+
+%\cvitem{Programming}{Python, MATLAB, Bash/shell, regex, C/C++}
+\cvitem{Programming}{Python, MATLAB, Bash/shell, C/C++}
+%\cvitem{ML}{PyTorch, TensorFlow, PyTorch-Lightning, Scikit-learn, fastAI, Theano, Lasagne}
+\cvitem{ML}{PyTorch, PyTorch-Lightning, TensorFlow, Scikit-learn}
+\cvitem{Development}{Git, pre-commit, TDD, CI/CD, GHA}
+\cvitem{Job Scheduler}{Slurm, LSF}
+\cvitem{Cloud comp.}{AWS, GCP}
+%\cvitem{Web}{PHP, JavaScript, AJAX, HTML5, CSS3}
+%\cvitem{Markup}{Markdown, rST, YAML, JSON, TOML, XML}
+%\cvitem{Database}{SQL, MySQL}
+
+
+%------------------------------------------------
 \section{Online Presence}
 
-\cvitem{G Scholar}{\href{https://scholar.google.com/citations?user=ZFPhxuAAAAAJ}{Scott C. Lowe}}{}{}{}{}{}
+\cvitem{G Scholar}{\href{https://scholar.google.com/citations?user=ZFPhxuAAAAAJ}{Scott~C.~Lowe}}{}{}{}{}{}
 \cvitem{Personal}{\textnormal{\href{https://scottclowe.com}{scottclowe.com}}}{}{}{}{}{}
 \cvitem{GitHub}{\textnormal{\href{https://github.com/scottclowe}{github.com/scottclowe}}}{}{}{}{}{}
 \cvitem{LinkedIn}{\textnormal{\href{http://linkedin.com/in/scottclowe}{linkedin.com/in/scottclowe}}}{}{}{}{}{}
-\cvitem{StackOverfl--}{\textnormal{\href{https://stackoverflow.com/users/1960959/scottclowe}{stackoverflow.com/users/1960959/scottclowe}}}{}{}{}{}{}
 \cvitem{Kaggle}{\textnormal{\href{https://www.kaggle.com/scottclowe}{kaggle.com/scottclowe}}, Kaggle Competitions Master}{}{}{}{}{}
+\cvitem{Stack Overflow}{\textnormal{\href{https://stackoverflow.com/users/1960959/scottclowe}{stackoverflow.com/users/1960959/scottclowe}}}{}{}{}{}{}
 
 
 %----------------------------------------------------------------------------------------
